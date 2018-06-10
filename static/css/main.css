@@ -19,7 +19,6 @@ background: rgba(249,249,249);
 padding: 2px 5%;
 visibility: hidden;
 position: relative;
-z-index: 20;
 }
 
 .cookieBanner h3{
@@ -68,6 +67,13 @@ font-weight: lighter;
 .sticky + .content {
   padding-top: 100px;
 }
+
+.stickyLeftMenu{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
 
 .bannerUp {
   transition-property: transform;
@@ -168,12 +174,11 @@ a:hover{
 
 .leftMenu{
   margin-left:100px;
-  margin-top: -20px;
   font-family: "Quicksand", sans-serif;
   letter-spacing: 0.1rem;
   font-size: 12px;
-  position: relative;
-  z-index: -0.1;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
 }
 
 .productList{

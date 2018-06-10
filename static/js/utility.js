@@ -5,6 +5,7 @@ var header = document.getElementById("bigBanner");
 var leftMenu = document.getElementById("leftMenu");
 var sticky = header.offsetTop;
 var stickyLeftMenu = leftMenu.offsetTop;
+console.log("leftmenu offsettop", stickyLeftMenu);
 var emailClickTime = 0;
 console.log(sticky);
 
@@ -18,6 +19,14 @@ function myFunction() {
     header.classList.add("sticky");
   } else {
     header.classList.remove("sticky");
+  }
+
+  if(window.pageYOffset >= stickyLeftMenu-100){
+    leftMenu.style.transform = 'translateY(100px)';
+    leftMenu.classList.add("stickyLeftMenu");
+  }else{
+    leftMenu.classList.remove("stickyLeftMenu");
+    leftMenu.style.transform = 'translateY(0px)';
   }
 }
 
