@@ -44,7 +44,7 @@ z-index: 3;
   text-align:center;
 }
 
-.header h1{
+.header a{
 font-family: "Gochi Hand", sans-serif;
 color: black;
 letter-spacing: 0.5rem;
@@ -213,12 +213,13 @@ a:hover{
 }
 
 
-.centerConent{
+.centerContent{
 margin-left: calc(50% - 65px);
 margin-top: -200px;
+font-family: "Quicksand", sans-serif;
 }
 
-.centerConent img{
+.centerContent img{
   display: block;
 }
 
@@ -234,7 +235,7 @@ font-family:  "Quicksand", sans-serif;
   font-weight: bolder;
 }
 
-.centerConent #productImg{
+.centerContent #productImg{
   width: 130px;
 }
 
@@ -268,6 +269,7 @@ padding:20px 50px 20px 50px;
 
 .footerContent {
   margin-top: 100px;
+  letter-spacing: 0.08rem;
 }
 
 .footerContent #terms{
@@ -379,4 +381,29 @@ hr.divisionLine {
   background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
   background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
   background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+}
+
+.languageSelector{
+  display: inline;
+}
+
+.languageSelector a{
+  color: grey;
+  text-decoration: underline;
+}
+
+.centerContent #contactExplanation{
+  font-size: 13px;
+  font-family: "Quicksand", sans-serif;
+  margin-top: -250px;
+  margin-left: -60px;
+}
+
+.Enquiry{
+  margin-left: -60px;
+  margin-top: 100px;
+}
+.Enquiry #sendEnquriy{
+  color:red;
+  font-size: 12px;
 }
