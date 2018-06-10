@@ -3,30 +3,52 @@ window.onscroll = function() {myFunction()};
 
 var header = document.getElementById("bigBanner");
 var leftMenu = document.getElementById("leftMenu");
+var bottomContent = document.getElementById("bottomContent");
+var screenHeight = screen.height;
+var innerHeight = window.innerHeight;
 var sticky = header.offsetTop;
 var stickyLeftMenu = leftMenu.offsetTop;
-console.log("leftmenu offsettop", stickyLeftMenu);
+var bottomContentOffset = bottomContent.offsetTop;
+//console.log("window height", innerHeight);
+//console.log("bottomconent offsettop", bottomContentOffset);
+//console.log("screen height: ", screenHeight);
 var emailClickTime = 0;
-console.log(sticky);
+//console.log(sticky);
 
 var emailBar = document.getElementById("emailSub");
 var isFocused = (document.activeElement === emailBar);
-console.log(isFocused);
+//console.log(isFocused);
 
 
 function myFunction() {
+  var scrollUp = this.oldScroll > this.scrollY
+  this.oldScroll = this.scrollY
+  console.log(scrollUp);
+  console.log(window.pageYOffset);
   if (window.pageYOffset >= sticky) {
     header.classList.add("sticky");
   } else {
     header.classList.remove("sticky");
   }
 
-  if(window.pageYOffset >= stickyLeftMenu-100){
+  if(window.pageYOffset >= stickyLeftMenu-100 && window.pageYOffset < 300){
     leftMenu.style.transform = 'translateY(100px)';
+    if(!scrollUp){
+    leftMenu.classList.add("leftMenuAnimation");
+    }
     leftMenu.classList.add("stickyLeftMenu");
-  }else{
+
+  }else if(window.pageYOffset < stickyLeftMenu-100 ){
     leftMenu.classList.remove("stickyLeftMenu");
     leftMenu.style.transform = 'translateY(0px)';
+    leftMenu.classList.add("leftMenuAnimation");
+  }
+  if (window.pageYOffset >= 300) {
+    leftMenu.classList.remove("stickyLeftMenu");
+    leftMenu.classList.remove("leftMenuAnimation");
+    leftMenu.style.transform = 'translateY(270px)';
+  }else{
+    leftMenu.classList.add("stickyLeftMenu");
   }
 }
 

@@ -18,7 +18,7 @@ background: rgba(0,0,0,0);
 background: rgba(249,249,249);
 padding: 2px 5%;
 visibility: hidden;
-position: relative;
+z-index: 3;
 }
 
 .cookieBanner h3{
@@ -177,6 +177,10 @@ a:hover{
   font-family: "Quicksand", sans-serif;
   letter-spacing: 0.1rem;
   font-size: 12px;
+  z-index: 2;
+}
+
+.leftMenuAnimation{
   transition-duration: 0.3s;
   transition-timing-function: linear;
 }

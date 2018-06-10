@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 </head>
 <body onload="loadCookieEnabled();">
-  <div id="bigBanner">
+  <div id="bigBanner"  style="z-index: 1000">
     <div class="cookieBanner"  id="cookieBanner">
     <h3>by continuing browse this website, you agree to our use of <a href="#" style="color:grey;   text-decoration: underline;">cookies</a> . These allow us to collect information to improve your experience.</h3>
     <a  id="cookieAgreement" href="#" onclick="cookieAgree();">I AGREE</a>
@@ -22,22 +22,23 @@
 
 
 <div class="content">
-  <div class="leftMenu" id="leftMenu">
-<input type="text" name="" value="" placeholder="SEARCH" id="search">
-<div class="productList menuTitle" >
-  <h3>PRODUCT</h3>
-<a href="#" style="margin-left: 30px; ">PURAY I</a>
-</div>
-<div class="introduction menuTitle">
-  <h3> I.D.E.A</h3>
-  <a href="#">YOUR NATURAL BEAUTY</a>
-  <a href="#">YOUR SMART HEALTH</a>
-</div>
-
-<div class="contactUs menuTitle">
-<a href="#" style="margin-left:0px;">CONTACT US</a>
-</div>
+    <div class="leftMenu" id="leftMenu" style="z-index:1; margin-top:30px;">
+  <input type="text" name="" value="" placeholder="SEARCH" id="search">
+  <div class="productList menuTitle" >
+    <h3>PRODUCT</h3>
+  <a href="#" style="margin-left: 30px; ">PURAY I</a>
   </div>
+  <div class="introduction menuTitle">
+    <h3> I.D.E.A</h3>
+    <a href="#">YOUR NATURAL BEAUTY</a>
+    <a href="#">YOUR SMART HEALTH</a>
+  </div>
+
+  <div class="contactUs menuTitle">
+  <a href="#" style="margin-left:0px;">CONTACT US</a>
+  </div>
+    </div>
+
 
 <div class="centerConent">
   <img src="static/image/PURAYI.JPG" alt="" id="productImg" >
@@ -49,7 +50,7 @@
 <h3 id="price">99 CAD</h3>
 </div>
 
-<div class="bottomContent" style="margin-left: 100px;">
+<div class="bottomContent" style="margin-left: 100px;" id="bottomContent">
   <hr class="divisionLine">
   <div class="emailSubContent">
     <div class="leftBottom">
