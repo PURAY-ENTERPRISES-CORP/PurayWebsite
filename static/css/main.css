@@ -566,7 +566,7 @@ font-size: 11px;
 width: calc(41.5% - 2px);
 margin-left: 1px;
 }
-#emailLabel{
+#emailSubLabel{
   display: inline-block;
   margin-left: calc(-41.5% - 2px);
 }

@@ -98,9 +98,9 @@ activeSubmit();
 $("#emailInputBox").on('click', function () {
   console.log(lastNameClickTime);
   if(emailBoxClickTime > 0 && emailBoxClickTime%2 == 0){
-  $("#emailLabel").removeClass("enquirylabelUp");
+  $("#emailSubLabel").removeClass("enquirylabelUp");
   }
-  $("#emailLabel").addClass("enquirylabelUp");
+  $("#emailSubLabel").addClass("enquirylabelUp");
   emailBoxClickTime += 1;
 });
 
@@ -109,20 +109,20 @@ var emailValue = this.value;
 var trimedLength = emailValue.trim().length ;
 console.log(trimedLength);
 if(trimedLength == 0 || emailValue == null){
-  $("#emailLabel").css("color", "red");
+  $("#emailSubLabel").css("color", "red");
   $("#emailInputBox").css("box-shadow", " -10px 14px 0px -8.9px red");
   $('#emailReminder').text('This Field is Required.');
   $("#emailReminder").css("visibility","visible");
   emailReady = false;
 
 }else if(!validateEmail(emailValue)){
-  $("#emailLabel").css("color", "red");
+  $("#emailSubLabel").css("color", "red");
   $("#emailInputBox").css("box-shadow", " -10px 14px 0px -8.9px red");
   $('#emailReminder').text('Email address is invalid.');
   $("#emailReminder").css("visibility","visible");
   emailReady = false;
 }else{
-  $("#emailLabel").css("color", "grey");
+  $("#emailSubLabel").css("color", "grey");
   $("#emailInputBox").css("box-shadow", "-10px 14px 0px -8.9px grey");
   $("#emailReminder").css("visibility","hidden");
   emailReady = true;
