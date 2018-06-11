@@ -93,7 +93,17 @@ font-weight: lighter;
   transition-timing-function: linear;
 }
 
+.enquirylabelUp{
+  transition-duration: 0.2s;
+  transform:translateY(-15px);
+  transition-timing-function: linear;
+}
 
+.enquirylabelDown{
+  transition-duration: 0.2s;
+  transform:translateY(0px);
+  transition-timing-function: linear;
+}
 
 #search{
   height:17px;
@@ -406,4 +416,217 @@ hr.divisionLine {
 .Enquiry #sendEnquriy{
   color:red;
   font-size: 12px;
+}
+
+
+.centerContent #enquiryForm{
+font-family: "Quicksand", sans-serif;
+margin-left: -60px;
+}
+
+.centerContent #title{
+  width: calc(14% - 2px);
+  border: 0px;
+  font-size: 13px;
+  background-color: rgba(0,0,0,0);
+  box-shadow: -10px 14px 0px -9px grey;
+  color:grey;
+  position: relative;
+  z-index: 12;
+}
+.centerContent #title:focus{
+  outline: none;
+}
+
+.centerContent1{
+  visibility: visible;
+  position: relative;
+  z-index: 12;
+}
+
+.centerContent2{
+  visibility: hidden;
+transform: translateY(-200px);
+position: relative;
+z-index: 11;
+}
+
+
+#title option{
+  color: black;
+  background-color: grey;
+}
+
+.titleLabel{
+color:grey;
+font-size: 13px;
+margin-left: calc(-14% - 1px);
+display: inline-block;
+}
+
+.form-item select {
+  -webkit-appearance: none;
+  border-radius: 0;
+  -webkit-border-radius:0px;
+}
+
+#titleReminder{
+  font-size: 11px;
+  font-weight: lighter;
+  color: red;
+  visibility: hidden;
+}
+
+#firstNameReminder{
+  font-size: 11px;
+  font-weight: lighter;
+  color: red;
+  visibility: hidden;
+}
+
+.reminder{
+  font-size: 11px;
+  font-weight: lighter;
+  color: red;
+  visibility: hidden;
+}
+
+.firstNameInput{
+  font-size: 13px;
+  font-weight: lighter;
+  margin-left: 120px;
+  margin-top: -70px;
+}
+
+#firstNameInputBox{
+  height:17px;
+  border: 0;
+  width: calc(27% - 2px);
+  margin-left:1px;
+  box-shadow: -10px 14px 0px -8.9px grey;
+  -webkit-transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  font-size: 11px;
+  letter-spacing: 0.1rem;
+  font-family: "Quicksand", sans-serif;
+  margin-top: 15px;
+}
+#firstNameInputBox:focus{
+  outline: none;
+}
+
+#firstNameLabel{
+  margin-left: calc(-27% - 2px);
+}
+
+.fieldInput{
+  height:17px;
+  border: 0;
+  box-shadow: -10px 14px 0px -8.9px grey;
+  -webkit-transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  font-size: 11px;
+  letter-spacing: 0.1rem;
+  font-family: "Quicksand", sans-serif;
+  position: relative;
+  z-index: 12;
+}
+
+.fieldInput:focus{
+  outline: none;
+}
+
+#lastNameInputBox{
+font-size: 11px;
+width: calc(41.5% - 2px);
+margin-left: 1px;
+}
+#lastNameLabel{
+  display: inline-block;
+  margin-left: calc(-41.5% - 2px);
+}
+
+.fieldLabel{
+  font-size: 13px;
+  color: grey;
+  display: inline-block;
+}
+
+.lastNameInput{
+  margin-top: 30px;
+}
+
+
+.emailInput{
+  margin-top: 30px;
+}
+
+#emailInputBox{
+font-size: 11px;
+width: calc(41.5% - 2px);
+margin-left: 1px;
+}
+#emailLabel{
+  display: inline-block;
+  margin-left: calc(-41.5% - 2px);
+}
+
+.phoneInput{
+  margin-top: 30px;
+}
+
+#phoneInputBox{
+font-size: 11px;
+width: calc(41.5% - 2px);
+margin-left: 1px;
+}
+#phoneLabel{
+  display: inline-block;
+  margin-left: calc(-41.5% - 2px);
+}
+
+.commentInput{
+  margin-top: 30px;
+}
+
+
+#commentLabel{
+  display: inline-block;
+  margin-left: calc(-60% - 2px);
+}
+
+.commentLabelUp{
+  transition-duration: 0.2s;
+  transform:translateY(-35px);
+  transition-timing-function: linear;
+}
+
+#commentTextArea{
+  resize: none;
+	width: calc(60% - 2px);
+	min-height: 22px;
+	padding: 5px;
+	overflow: hidden;
+	box-sizing: border-box;
+    box-shadow: -10px 14px 0px -10.5px grey;
+    background: rgba(0,0,0,0);
+}
+
+
+
+.SubmitAndCancel input{
+display: none;
+}
+
+#submitInquiryButton{
+  color: grey;
+}
+
+#submitInquiryButton:hover{
+  opacity: 0.5;
+}
+
+
+#cancelInquiryButton{
+  color:grey;
 }
