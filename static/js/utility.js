@@ -139,3 +139,19 @@ function validateEmail(email) {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
 }
+
+$('#emailSubscribeForm').submit(function(e){
+    e.preventDefault(); // stops the form submission
+    var formContent = $(this).serialize();
+    $.ajax({
+      url: 'index.php', // action attribute of form to send the values
+      type: 'POST', // method used in the form
+      data: formContent,
+      dataType: "text"
+    });
+    $('#thankSubscription').css("visibility","visible");
+    $('#emailSubscription').css("visibility","hidden");
+    $('#emailFormOther').css("visibility","hidden");
+    document.body.style.height =   "1000px";
+    $('.footerContent').css('transform', 'translateY(0px)');
+    });

@@ -23,7 +23,6 @@
     </div>
 
     <div class="content">
-
       <div class="leftMenu" id="leftMenu" style="z-index:1; margin-top:30px;">
     <input type="text" name="" value="" placeholder="SEARCH" id="search">
     <div class="productList menuTitle" >
@@ -37,69 +36,18 @@
     </div>
 
     <div class="contactUs menuTitle">
-    <a href="contact.html" style="margin-left:0px; color:red;">CONTACT US</a>
+    <a href="contact.html" style="margin-left:0px;">CONTACT US</a>
     </div>
       </div>
 
-      <div class="centerContent" style="position: relative; z-index:13;">
-        <div class="centerContent1">
-          <p id="contactExplanation"> Email <br> <br> You can email us at <a style="color:grey; text-decoration: underline;" href="mailto:clientservice@puray.ca" >clientservice@puray.ca</a> <br><br>
-        An advisor will respond to you in English, French or Mandarin <br> <br> within 24 hours, from Monday to Saturday.</p>
-          <div class="Enquiry" >
-            <a id="sendEnquriy">SEND ENQUIRY</a>
-          </div>
-        </div>
-        <div class="centerContent2">
-          <form class="" action="index.html" method="post" id="enquiryForm">
-            <div class="titleInput">
-              <select name="" id="title" value=" ">
-                <option label="" style="display: none" id="hiddenOption"> </option>
-                <option value="Mr.">Mr.</option>
-                <option value="Miss.">Miss.</option>
-                <option value="Mrs.">Mrs.</option>
-                <option value="Ms.">Ms.</option>
-              </select>
-              <label id="titleLabel" class="titleLabel">TITLE</label>
-              <h3 id="titleReminder" class="reminder">This Field is Required.</h3>
-            </div>
-            <div class="firstNameInput">
-              <input type="text" name="" value="" placeholder="" id="firstNameInputBox" class="fieldInput">
-              <label id="firstNameLabel" class="firstNameLabel fieldLabel">FIRST NAME</label>
-              <h3 id="firstNameReminder" class="reminder">This Field is Required.</h3>
-            </div>
-            <div class="lastNameInput">
-              <input type="text" name="" value="" id="lastNameInputBox" class="fieldInput">
-              <label id="lastNameLabel" class="lastNameLabel fieldLabel">LAST NAME</label>
-              <h3 id="lastNameReminder" class="reminder">This Field is Required.</h3>
-            </div>
-            <div class="emailInput">
-              <input type="text" name="" value="" id="emailInputBox" class="fieldInput">
-              <label id="emailSubLabel" class="emailSubLabel fieldLabel">EMAIL</label>
-              <h3 id="emailReminder" class="reminder">This Field is Required.</h3>
-            </div>
-            <div class="phoneInput">
-              <input type="text" name="" value="" id="phoneInputBox" class="fieldInput">
-              <label id="phoneLabel" class="phoneLabel fieldLabel">PHONE NUMBER (OPTIONAL)</label>
-              <h3 id="phoneReminder" class="reminder">Invalid Phone Number.</h3>
-            </div>
-            <div class="commentInput">
-              <textarea name="name" rows="2" cols="80" class="fieldInput" id="commentTextArea"></textarea>
-              <label id="commentLabel" class="commentLabel fieldLabel">COMMENT</label>
-              <h3 id="commentReminder" class="reminder">This Field is Required.</h3>
-            </div>
-            <div class="SubmitAndCancel">
-              <input type="submit" name="" value="SUBMIT"  id="submitInquiry" disabled>
-               <label for="submitInquiry" id="submitInquiryButton">SUBMIT</label>
-               <a  style="margin-left:100px;" id="cancelInquiryButton">CANCEL</a>
-            </div>
-
-          </form>
-        </div>
-
+      <div class="centerContent" style="margin-top: -300px; ">
+        <img src="static/image/PURAYI.JPG" alt="" id="productImg" >
+        <h3 id="QRExplain">PLEASE SCAN THE QR CODE TO FOLLOW OUR OFFICIAL WECHAT <br> ACCOUNT AND RECEIVE THE LATEST NEWS FROM PURAY.</h3>
       </div>
 
 
-      <div class="bottomContent" style="margin-left: 100px; margin-top: -70px;" id="bottomContent">
+
+      <div class="bottomContent" style="margin-left: 100px; margin-top: 150px;" id="bottomContent">
         <hr class="divisionLine">
         <div class="emailSubContent">
           <div class="leftBottom">
@@ -134,7 +82,7 @@
       </td>
               </tr>
               <tr>
-                <td><a href="wechat.html">Wechat</a></td>
+                <td><a href="wechat.html" style="color: red;">Wechat</a></td>
                 <td><a href="#">Linked</a></td>
               </tr>
             </table>
@@ -143,7 +91,7 @@
         </div>
 
         <div class="footerContent">
-          <h5 id="purayLogoFooter">PURAY/Contact Us</h5>
+          <h5 id="purayLogoFooter">PURAY/QRCode For Wechat</h5>
           <li style="text-align: center; list-style: none; margin-top:-42px; margin-left:-80px;">
         <a id="terms" href="#">Terms & Conditions</a>
       </li>
@@ -151,11 +99,9 @@
 
     </div>
 
-
+    </div>
     <script type="text/javascript" src="static/js/jquery.js"></script>
     <script type="text/javascript" src="static/js/utility.js"></script>
     <script type="text/javascript" src="static/js/cookieHandler.js"></script>
-    <script type="text/javascript" src="static/js/contactFormUtility.js"></script>
-    <script type="text/javascript" src="static/js/textarea-autogrow.js"></script>
   </body>
 </html>

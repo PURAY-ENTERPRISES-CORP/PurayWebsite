@@ -10,6 +10,9 @@
 <link rel="icon" type="image/png" href="static/image/icon.PNG">
 </head>
 <body onload="loadCookieEnabled();">
+<?php
+require_once('config.php');
+ ?>
   <div id="bigBanner" >
     <div class="cookieBanner"  id="cookieBanner">
     <h3>by continuing browse this website, you agree to our use of <a href="#" style="color:grey;   text-decoration: underline;">cookies</a> . These allow us to collect information to improve your experience.</h3>
@@ -56,23 +59,39 @@
   <div class="emailSubContent">
     <div class="leftBottom">
       <h4>NEWSLETTER</h4>
-      <form class="" action="index.html" method="post" name="emailSubscription">
+      <form class="" action="index.php" method="post" name="emailSubscription" id="emailSubscribeForm">
         <div class="emailSubscription" id="emailSubscription">
-          <input type="text" name="" value="" id="emailSub" >
+          <input type="text" name="emailAddress" value="" id="emailSub">
           <label id="emailLabel">EMAIL</label>
           <h5 id="notValidEmail">Please enter a valid email address.</h5>
-          <div class="emailFormOther">
+          <div class="emailFormOther" id="emailFormOther">
           <div class="checkbox">
         <input type="checkbox" id="checkbox_1">
         <label for="checkbox_1">I have read, understood and agree to the  <a href="#">Privacy Policy</a> and the  <br> <a href="#">Terms of Use</a></label>
             </div>
         <div class="submitForm">
-               <input type="submit" name="" value="REGISTER" id="submitEmail" disabled>
+               <input type="submit" name="submitEmailSub" value="REGISTER" id="submitEmail"  disabled>
                <label for="submitEmail" id="submitEmailLabel">REGISTER</label>
         </div>
           </div>
         </div>
+          <h3 id="thankSubscription">Thank you for your registration.</h3>
       </form>
+
+
+      <?php
+      if(isset($_POST['emailAddress'])){
+        $emailAddress = $_POST['emailAddress'];
+        $date = date('Y-m-d H:i:s');
+        $sql = "INSERT INTO Email_Subscription".
+        " (Email_Address, Starting_Date, Email_Sent_Count)".
+        "VALUES ('$emailAddress', current_timestamp, 0)";
+        $retval = mysqli_query( $conn, $sql );
+        //ignore any mysqli error, the error can only be duplicate email
+        mysqli_close($conn);
+      }
+
+       ?>
     </div>
     <div class="rightBottom">
       <table style="border-spacing: 50px 0; ">

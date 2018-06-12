@@ -415,7 +415,7 @@ hr.divisionLine {
 }
 .Enquiry #sendEnquriy{
   color:red;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 
@@ -629,4 +629,21 @@ display: none;
 
 #cancelInquiryButton{
   color:grey;
+}
+
+#QRExplain{
+  font-size: 13px;
+  font-weight: lighter;
+  transform: translateY(50px);
+  margin-left: -150px;
+  letter-spacing: 0.1rem;
+}
+
+#thankSubscription{
+  font-size:13px;
+  color:grey;
+  font-family: "Quicksand", sans-serif;
+  font-weight: lighter;
+  transform: translateY(-180px);
+  visibility: hidden;
 }
