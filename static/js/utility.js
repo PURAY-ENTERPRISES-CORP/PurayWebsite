@@ -144,7 +144,7 @@ $('#emailSubscribeForm').submit(function(e){
     e.preventDefault(); // stops the form submission
     var formContent = $(this).serialize();
     $.ajax({
-      url: 'index.php', // action attribute of form to send the values
+      url: $(this).attr('action'), // action attribute of form to send the values
       type: 'POST', // method used in the form
       data: formContent,
       dataType: "text"

@@ -11,6 +11,9 @@
     <link rel="icon" type="image/png" href="static/image/icon.PNG">
   </head>
   <body onload="loadCookieEnabled();">
+    <?php
+    require_once('config.php');
+     ?>
     <div id="bigBanner" >
       <div class="cookieBanner"  id="cookieBanner">
       <h3>by continuing browse this website, you agree to our use of <a href="#" style="color:grey;   text-decoration: underline;">cookies</a> . These allow us to collect information to improve your experience.</h3>
@@ -18,7 +21,7 @@
       </div>
 
       <div class="header" id="myHeader" style="z-index: -1;">
-        <a href="index.html">PURAY</a>
+        <a href="/">PURAY</a>
       </div>
     </div>
 
@@ -37,7 +40,7 @@
     </div>
 
     <div class="contactUs menuTitle">
-    <a href="contact.html" style="margin-left:0px; color:red;">CONTACT US</a>
+    <a href="contact" style="margin-left:0px; color:red;">CONTACT US</a>
     </div>
       </div>
 
@@ -50,9 +53,9 @@
           </div>
         </div>
         <div class="centerContent2">
-          <form class="" action="index.html" method="post" id="enquiryForm">
+          <form class="" action="contact.php" method="post" id="enquiryForm">
             <div class="titleInput">
-              <select name="" id="title" value=" ">
+              <select name="inquiryTitle" id="title" value=" ">
                 <option label="" style="display: none" id="hiddenOption"> </option>
                 <option value="Mr.">Mr.</option>
                 <option value="Miss.">Miss.</option>
@@ -63,28 +66,28 @@
               <h3 id="titleReminder" class="reminder">This Field is Required.</h3>
             </div>
             <div class="firstNameInput">
-              <input type="text" name="" value="" placeholder="" id="firstNameInputBox" class="fieldInput">
+              <input type="text" name="inquiryFirstName" value="" placeholder="" id="firstNameInputBox" class="fieldInput">
               <label id="firstNameLabel" class="firstNameLabel fieldLabel">FIRST NAME</label>
               <h3 id="firstNameReminder" class="reminder">This Field is Required.</h3>
             </div>
             <div class="lastNameInput">
-              <input type="text" name="" value="" id="lastNameInputBox" class="fieldInput">
+              <input type="text" name="inquiryLastName" value="" id="lastNameInputBox" class="fieldInput">
               <label id="lastNameLabel" class="lastNameLabel fieldLabel">LAST NAME</label>
               <h3 id="lastNameReminder" class="reminder">This Field is Required.</h3>
             </div>
             <div class="emailInput">
-              <input type="text" name="" value="" id="emailInputBox" class="fieldInput">
+              <input type="text" name="inquiryEmail" value="" id="emailInputBox" class="fieldInput">
               <label id="emailSubLabel" class="emailSubLabel fieldLabel">EMAIL</label>
               <h3 id="emailReminder" class="reminder">This Field is Required.</h3>
             </div>
             <div class="phoneInput">
-              <input type="text" name="" value="" id="phoneInputBox" class="fieldInput">
+              <input type="text" name="inquiryPhone" value="" id="phoneInputBox" class="fieldInput">
               <label id="phoneLabel" class="phoneLabel fieldLabel">PHONE NUMBER (OPTIONAL)</label>
               <h3 id="phoneReminder" class="reminder">Invalid Phone Number.</h3>
             </div>
             <div class="commentInput">
-              <textarea name="name" rows="2" cols="80" class="fieldInput" id="commentTextArea"></textarea>
-              <label id="commentLabel" class="commentLabel fieldLabel">COMMENT</label>
+              <textarea name="inquiryComment" rows="2" cols="80" class="fieldInput" id="commentTextArea" placeholder="COMMENT"></textarea>
+              <!--<label id="commentLabel" class="commentLabel fieldLabel">COMMENT</label>-->
               <h3 id="commentReminder" class="reminder">This Field is Required.</h3>
             </div>
             <div class="SubmitAndCancel">
@@ -94,39 +97,77 @@
             </div>
 
           </form>
+<?php
+  if(isset($_POST['inquiryTitle'])&&isset($_POST['inquiryFirstName'])
+  &&isset($_POST['inquiryLastName'])&&isset($_POST['inquiryEmail'])&&isset($_POST['inquiryPhone'])&&isset($_POST['inquiryComment'])){
+    $inquiryTitle = $_POST['inquiryTitle'];
+    $inquiryFirstName = $_POST['inquiryFirstName'];
+    $inquiryLastName = $_POST['inquiryLastName'];
+    $inquiryEmail = $_POST['inquiryEmail'];
+    $inquiryPhone = $_POST['inquiryPhone'];
+    $inquiryComment = $_POST['inquiryComment'];
+    $sql = "INSERT INTO Client_Inquiry".
+    " (Title, FirstName, LastName, Email, PhoneNumber, Comment,InquiryTime)".
+    "VALUES ('$inquiryTitle', '$inquiryFirstName', '$inquiryLastName', '$inquiryEmail', '$inquiryPhone', '$inquiryComment', current_timestamp)";
+    $retval = mysqli_query( $conn, $sql );
+    //ignore any mysqli error, the error can only be duplicate email
+    mysqli_close($conn);
+  }
+
+ ?>
+
+
+        </div>
+        <div class="centerContent3">
+          <p>Inquiry <br><br>We recieved your inquiry.  <br><br> An advisor will respond to you in English, French or Mandarin <br> <br> within 24 hours, from Monday to Saturday.</p>
         </div>
 
       </div>
 
 
-      <div class="bottomContent" style="margin-left: 100px; margin-top: -70px;" id="bottomContent">
+      <div class="bottomContent" style="margin-left: 100px; margin-top: -180px;" id="bottomContent">
         <hr class="divisionLine">
         <div class="emailSubContent">
           <div class="leftBottom">
             <h4>NEWSLETTER</h4>
-            <form class="" action="index.html" method="post" name="emailSubscription">
+            <form class="" action="contact.php" method="post" name="emailSubscription" id="emailSubscribeForm">
               <div class="emailSubscription" id="emailSubscription">
-                <input type="text" name="" value="" id="emailSub" >
+                <input type="text" name="emailAddress" value="" id="emailSub">
                 <label id="emailLabel">EMAIL</label>
                 <h5 id="notValidEmail">Please enter a valid email address.</h5>
-                <div class="emailFormOther">
+                <div class="emailFormOther" id="emailFormOther">
                 <div class="checkbox">
               <input type="checkbox" id="checkbox_1">
               <label for="checkbox_1">I have read, understood and agree to the  <a href="#">Privacy Policy</a> and the  <br> <a href="#">Terms of Use</a></label>
                   </div>
               <div class="submitForm">
-                     <input type="submit" name="" value="REGISTER" id="submitEmail" disabled>
+                     <input type="submit" name="submitEmailSub" value="REGISTER" id="submitEmail"  disabled>
                      <label for="submitEmail" id="submitEmailLabel">REGISTER</label>
               </div>
                 </div>
               </div>
+                <h3 id="thankSubscription">Thank you for your registration.</h3>
             </form>
+
+            <?php
+            if(isset($_POST['emailAddress'])){
+              $emailAddress = $_POST['emailAddress'];
+              $date = date('Y-m-d H:i:s');
+              $sql = "INSERT INTO Email_Subscription".
+              " (Email_Address, Starting_Date, Email_Sent_Count)".
+              "VALUES ('$emailAddress', current_timestamp, 0)";
+              $retval = mysqli_query( $conn, $sql );
+              //ignore any mysqli error, the error can only be duplicate email
+              mysqli_close($conn);
+            }
+             ?>
+
           </div>
           <div class="rightBottom">
             <table style="border-spacing: 50px 0; ">
               <tr>
-                <td><a href="contact.html">Contact</a></td>
-                <td><a href="#">Instagram</a></td>
+                <td><a href="contact">Contact</a></td>
+                <td><a href="https://www.instagram.com/puray.ca/">Instagram</a></td>
                 <td>Language &nbsp;&nbsp;
       <div class="languageSelector">
         <a href="#">EN</a> / <a href="#">FR</a> / <a href="#">CN</a>

@@ -237,3 +237,19 @@ function restoreInquiryForm(){
   $(".fieldInput").css("box-shadow", " -10px 14px 0px -8.9px grey");
   $("#commentTextArea").css("box-shadow", "-10px 14px 0px -10.5px grey");
 }
+
+$('#enquiryForm').submit(function(e){
+    e.preventDefault(); // stops the form submission
+    var formContent = $(this).serialize();
+    console.log(formContent);
+    $.ajax({
+      url: $(this).attr('action'), // action attribute of form to send the values
+      type: 'POST', // method used in the form
+      data: formContent,
+      dataType: "text"
+    });
+    $(".centerContent1").css('visibility','hidden');
+    $(".centerContent2").css('visibility','hidden');
+    $(".centerContent3").css('visibility','visible');
+    $(".centerContent3").css('z-index','13');
+    });

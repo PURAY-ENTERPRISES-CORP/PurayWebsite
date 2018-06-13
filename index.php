@@ -20,7 +20,7 @@ require_once('config.php');
     </div>
 
     <div class="header" id="myHeader" style="z-index: -1;">
-      <a href="index.html">PURAY</a>
+      <a href="\">PURAY</a>
     </div>
   </div>
 
@@ -39,7 +39,7 @@ require_once('config.php');
   </div>
 
   <div class="contactUs menuTitle">
-  <a href="contact.html" style="margin-left:0px;">CONTACT US</a>
+  <a href="contact" style="margin-left:0px;">CONTACT US</a>
   </div>
     </div>
 
@@ -59,7 +59,7 @@ require_once('config.php');
   <div class="emailSubContent">
     <div class="leftBottom">
       <h4>NEWSLETTER</h4>
-      <form class="" action="index.php" method="post" name="emailSubscription" id="emailSubscribeForm">
+      <form class="" action="\" method="post" name="emailSubscription" id="emailSubscribeForm">
         <div class="emailSubscription" id="emailSubscription">
           <input type="text" name="emailAddress" value="" id="emailSub">
           <label id="emailLabel">EMAIL</label>
@@ -90,14 +90,13 @@ require_once('config.php');
         //ignore any mysqli error, the error can only be duplicate email
         mysqli_close($conn);
       }
-
        ?>
     </div>
     <div class="rightBottom">
       <table style="border-spacing: 50px 0; ">
         <tr>
-          <td><a href="contact.html">Contact</a></td>
-          <td><a href="#">Instagram</a></td>
+          <td><a href="contact">Contact</a></td>
+          <td><a href="https://www.instagram.com/puray.ca/">Instagram</a></td>
           <td>Language &nbsp;&nbsp;
 <div class="languageSelector">
   <a href="#">EN</a> / <a href="#">FR</a> / <a href="#">CN</a>
