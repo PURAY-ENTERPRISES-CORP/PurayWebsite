@@ -175,8 +175,9 @@
       </td>
               </tr>
               <tr>
-                <td><a href="wechat.html">Wechat</a></td>
-                <td><a href="#">Linked</a></td>
+                <td><a href="wechat">Wechat</a></td>
+                <td><a href="#">LinkedIn</a></td>
+                <td><a href="https://www.facebook.com/puraybeauty">Facebook</a></td>
               </tr>
             </table>
           </div>

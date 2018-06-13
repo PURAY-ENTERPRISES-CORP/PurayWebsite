@@ -138,7 +138,7 @@ font-weight: lighter;
   font-family: "Quicksand", sans-serif;
   margin-top: 60px;
   position: relative;
-  z-index: 12;
+  z-index: 15;
 }
 
 .bottomContent #emailSub:focus {
@@ -238,6 +238,8 @@ margin-top: 450px;
 margin-left: 100px;
 letter-spacing: 0.03rem;
 font-family:  "Quicksand", sans-serif;
+position: relative;
+z-index: 13;
 }
 
 .bottomContent h4{
