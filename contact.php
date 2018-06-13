@@ -86,7 +86,7 @@
               <h3 id="phoneReminder" class="reminder">Invalid Phone Number.</h3>
             </div>
             <div class="commentInput">
-              <textarea name="inquiryComment" rows="2" cols="80" class="fieldInput" id="commentTextArea" placeholder="COMMENT"></textarea>
+              <textarea name="inquiryComment" rows="2" cols="80" class="fieldInput" id="commentTextArea" placeholder="COMMENT" maxlength="250"></textarea>
               <!--<label id="commentLabel" class="commentLabel fieldLabel">COMMENT</label>-->
               <h3 id="commentReminder" class="reminder">This Field is Required.</h3>
             </div>

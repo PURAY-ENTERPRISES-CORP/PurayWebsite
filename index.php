@@ -96,7 +96,7 @@ require_once('config.php');
       <table style="border-spacing: 50px 0; ">
         <tr>
           <td><a href="contact">Contact</a></td>
-          <td><a href="#">Instagram</a></td>
+          <td><a href="https://www.instagram.com/puray.ca/">Instagram</a></td>
           <td>Language &nbsp;&nbsp;
 <div class="languageSelector">
   <a href="#">EN</a> / <a href="#">FR</a> / <a href="#">CN</a>
@@ -105,7 +105,7 @@ require_once('config.php');
         </tr>
         <tr>
           <td><a href="wechat">Wechat</a></td>
-          <td><a href="#">Linked</a></td>
+          <td><a href="#">LinkedIn</a></td>
           <td><a href="https://www.facebook.com/puraybeauty">Facebook</a></td>
         </tr>
       </table>
