@@ -61,7 +61,7 @@ label.classList.add("labelUp");
 
 }
 
-$("#emailSub").on('click', function () {
+$("#emailSub").on('focus', function () {
   var emailContent = document.getElementById("emailSub").value;
   var length = emailContent.length;
   console.log(length);

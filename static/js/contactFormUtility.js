@@ -14,7 +14,7 @@ commentClickTime = 0;
 
 
 
-$("#title").on('click', function () {
+$("#title").on('focus', function () {
   console.log(titleClickTime);
   if(titleClickTime > 0 && titleClickTime%2 == 0){
   $("#titleLabel").removeClass("enquirylabelUp");
@@ -41,7 +41,7 @@ if(titleValue != "Mr." && titleValue != "Miss." && titleValue != "Mrs." &&  titl
 activeSubmit();
 });
 
-$("#firstNameInputBox").on('click', function () {
+$("#firstNameInputBox").on('focus', function () {
   if(firstNameClickTime > 0 && firstNameClickTime%2 == 0){
   $("#firstNameLabel").removeClass("enquirylabelUp");
   }
@@ -67,7 +67,7 @@ if(trimedLength == 0 || firstNameValue == null){
 activeSubmit();
 });
 
-$("#lastNameInputBox").on('click', function () {
+$("#lastNameInputBox").on('focus', function () {
   console.log(lastNameClickTime);
   if(lastNameClickTime > 0 && lastNameClickTime%2 == 0){
   $("#lastNameLabel").removeClass("enquirylabelUp");
@@ -95,7 +95,7 @@ activeSubmit();
 });
 
 
-$("#emailInputBox").on('click', function () {
+$("#emailInputBox").on('focus', function () {
   console.log(lastNameClickTime);
   if(emailBoxClickTime > 0 && emailBoxClickTime%2 == 0){
   $("#emailSubLabel").removeClass("enquirylabelUp");
@@ -130,7 +130,7 @@ if(trimedLength == 0 || emailValue == null){
 activeSubmit();
 });
 
-$("#phoneInputBox").on('click', function () {
+$("#phoneInputBox").on('focus', function () {
   console.log(lastNameClickTime);
   if(phoneClickTime > 0 && phoneClickTime%2 == 0){
   $("#phoneLabel").removeClass("enquirylabelUp");
@@ -169,7 +169,7 @@ activeSubmit();
 
 
 
-$("#commentTextArea").on('click', function () {
+$("#commentTextArea").on('focus', function () {
   if(commentClickTime > 0 && commentClickTime%2 == 0){
   $("#commentLabel").removeClass("commentLabelUp");
   }
@@ -199,10 +199,26 @@ function haveAlphabet(str){
 }
 
 $("#commentTextArea").on('input', function() {
+  var commentValue = $(this).val();
+  var length = commentValue.length;
+  var maxLength =$(this).attr('maxLength');
+  console.log("length ",length);
+  console.log("max", maxLength);
+  console.log(commentValue);
 	var scroll_height = $("#commentTextArea").get(0).scrollHeight;
   console.log(scroll_height);
 	$("#commentTextArea").css('height', scroll_height + 'px');
+  if(length == maxLength){
+    $('#commentReminder').text('Word limit reached.');
+    $("#commentReminder").css("visibility","visible");
+  }else{
+    $('#commentReminder').text('This Field is Required.');
+    $("#commentReminder").css("visibility","hidden");
+  }
 });
+
+
+
 
 function inquiryReady(){
 return (titleReady&&firstNameReady&&lastNameReady&&emailReady&&phoneReady&&commentReady);

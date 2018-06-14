@@ -75,8 +75,8 @@
               $emailAddress = $_POST['emailAddress'];
               $date = date('Y-m-d H:i:s');
               $sql = "INSERT INTO Email_Subscription".
-              " (Email_Address, Starting_Date, Email_Sent_Count)".
-              "VALUES ('$emailAddress', current_timestamp, 0)";
+              " (Email_Address, Starting_Date, Email_Sent_Count,Last_Email_ID)".
+              "VALUES ('$emailAddress', current_timestamp, 1,0)";
               $retval = mysqli_query( $conn, $sql );
               //ignore any mysqli error, the error can only be duplicate email
               mysqli_close($conn);

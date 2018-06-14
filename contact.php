@@ -46,7 +46,7 @@
 
       <div class="centerContent" style="position: relative; z-index:13;">
         <div class="centerContent1">
-          <p id="contactExplanation"> Email <br> <br> You can email us at <a style="color:grey; text-decoration: underline;" href="mailto:clientservice@puray.ca" >clientservice@puray.ca</a> <br><br>
+          <p id="contactExplanation"> Email <br> <br> You can email us at <a style="color:grey; text-decoration: underline;" href="mailto:clientservices@puray.ca" >clientservices@puray.ca</a> <br><br>
         An advisor will respond to you in English, French or Mandarin <br> <br> within 24 hours, from Monday to Saturday.</p>
           <div class="Enquiry" >
             <a id="sendEnquriy">SEND ENQUIRY</a>
@@ -106,12 +106,28 @@
     $inquiryEmail = $_POST['inquiryEmail'];
     $inquiryPhone = $_POST['inquiryPhone'];
     $inquiryComment = $_POST['inquiryComment'];
+    $currrentTime = current_timestamp;
     $sql = "INSERT INTO Client_Inquiry".
     " (Title, FirstName, LastName, Email, PhoneNumber, Comment,InquiryTime)".
-    "VALUES ('$inquiryTitle', '$inquiryFirstName', '$inquiryLastName', '$inquiryEmail', '$inquiryPhone', '$inquiryComment', current_timestamp)";
+    "VALUES ('$inquiryTitle', '$inquiryFirstName', '$inquiryLastName', '$inquiryEmail', '$inquiryPhone', '$inquiryComment', $currrentTime)";
     $retval = mysqli_query( $conn, $sql );
-    //ignore any mysqli error, the error can only be duplicate email
+    if($retval){
+      $inquiryID = mysqli_insert_id($conn);;
+    }else{
+      $inquiryID = "unknown";
+    }
+  //ignore any mysqli error, the error can only be duplicate email
     mysqli_close($conn);
+    //now send dev email
+    // the message
+    $msg = "Inquiry No. ". $inquiryID.":\n Client Name: ".$inquiryTitle." ";
+    $msg .= $inquiryFirstName." ".$inquiryLastName."\n";
+    $msg .= "Email: ".$inquiryEmail."\n"."Phone: ".$inquiryPhone."\n";
+    $msg .= "Comment: ".$inquiryComment;
+    // use wordwrap() if lines are longer than 70 characters
+    $msg = wordwrap($msg,70);
+    // send email
+    mail("clientservices@puray.ca","New Inquiry",$msg);
   }
 
  ?>
@@ -154,8 +170,8 @@
               $emailAddress = $_POST['emailAddress'];
               $date = date('Y-m-d H:i:s');
               $sql = "INSERT INTO Email_Subscription".
-              " (Email_Address, Starting_Date, Email_Sent_Count)".
-              "VALUES ('$emailAddress', current_timestamp, 0)";
+              " (Email_Address, Starting_Date, Email_Sent_Count,Last_Email_ID)".
+              "VALUES ('$emailAddress', current_timestamp, 0,0)";
               $retval = mysqli_query( $conn, $sql );
               //ignore any mysqli error, the error can only be duplicate email
               mysqli_close($conn);
