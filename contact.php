@@ -171,9 +171,22 @@
               $date = date('Y-m-d H:i:s');
               $sql = "INSERT INTO Email_Subscription".
               " (Email_Address, Starting_Date, Email_Sent_Count,Last_Email_ID)".
-              "VALUES ('$emailAddress', current_timestamp, 0,0)";
+              "VALUES ('$emailAddress', current_timestamp, 1,0)";
               $retval = mysqli_query( $conn, $sql );
               //ignore any mysqli error, the error can only be duplicate email
+              //send subscription email
+              $from = 'clientservices@puray.ca';
+              // To send HTML mail, the Content-type header must be set
+              $headers  = 'MIME-Version: 1.0' . "\r\n";
+              $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+              // Create email headers
+              $headers .= 'From: '.$from."\r\n".
+              'Reply-To: '.$from."\r\n" .
+              'X-Mailer: PHP/' . phpversion();
+              $ES_ID = mysqli_insert_id($conn);
+              $msg = file_get_contents("http://puray.ca/static/email/subscriptionEmail.html");
+              // send email
+              mail($emailAddress,"Subscription Confirmation",$msg,$headers);
               mysqli_close($conn);
             }
              ?>
