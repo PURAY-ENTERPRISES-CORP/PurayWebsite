@@ -155,3 +155,8 @@ $('#emailSubscribeForm').submit(function(e){
     document.body.style.height =   "1000px";
     $('.footerContent').css('transform', 'translateY(0px)');
     });
+
+
+$('#search').on('focus',function(){
+window.location.replace("searchInterface");
+});

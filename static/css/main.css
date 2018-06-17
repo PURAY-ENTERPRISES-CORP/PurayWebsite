@@ -114,6 +114,7 @@ font-weight: lighter;
   -webkit-transition: box-shadow 0.3s;
   transition: box-shadow 0.3s;
   font-size: 13px;
+  text-transform: uppercase;
   letter-spacing: 0.1rem;
   font-family: "Quicksand", sans-serif;
   background: rgba(0,0,0,0);
@@ -122,6 +123,27 @@ font-weight: lighter;
 #search:focus{
   outline: none;
   color: grey;
+}
+
+
+#searchPrimary{
+  height:17px;
+  border: 0;
+  width: calc(16% - 2px);
+  margin-left:1px;
+  box-shadow: -10px 14px 0px -9px black;
+  -webkit-transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-family: "Quicksand", sans-serif;
+  background: rgba(0,0,0,0);
+}
+
+#searchPrimary:focus{
+  outline: none;
+  color: black;
 }
 
 
