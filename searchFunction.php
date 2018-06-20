@@ -3,7 +3,11 @@ require_once('config.php');
 if(isset($_POST["searchKey"])){
 //get auto complete content
 $keyword = $_POST['searchKey']."%";
-$autoCompleteQuery = "SELECT * FROM  Search_Keywords where Keyword LIKE '$keyword' ";
+$autoCompleteQuery = "SELECT DISTINCT * FROM ( (SELECT First_Keyword as Keyword, Image_Src, Address  FROM".
+"(SELECT DISTINCT * FROM Keywords_Relation WHERE FIRST_KEYWORD LIKE '$keyword')  AS KR "
+."JOIN Search_Keywords ON SECOND_KEYWORD = KEYWORD) "
+."UNION (SELECT Keyword, Image_Src, Address FROM Search_Keywords WHERE KEYWORD LIKE '$keyword')) AS SR ".
+"GROUP BY Image_Src ";
 $result = mysqli_query($conn, $autoCompleteQuery);
 $data = "";
 if (mysqli_num_rows($result) > 0) {
@@ -14,10 +18,6 @@ if (mysqli_num_rows($result) > 0) {
       $address = $row["Address"];
       $data = $data.$keyword.";".$imgSrc.";".$address."\n";
     }
-    $insertDemo = "INSERT INTO demo".
-    " (StrValue)".
-    "VALUES ('$keyword')";
-    $retval = mysqli_query( $conn, $insertDemo );
 }
 echo $data;
 mysqli_close($conn);

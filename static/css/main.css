@@ -678,3 +678,13 @@ display: none;
   transform: translateY(-180px);
   visibility: hidden;
 }
+
+.searchResult{
+  margin-left: -450px;
+  margin-top: 150px;
+  border-spacing: 150px 100px;
+}
+.searchResult img{
+  width:120px;
+  height:auto;
+}

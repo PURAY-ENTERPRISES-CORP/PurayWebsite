@@ -11,7 +11,7 @@
 </head>
 <body onload="loadCookieEnabled(); focusSearchBox();">
 <?php
-require_once('config.php');
+//require_once('config.php');
  ?>
   <div id="bigBanner" >
     <div class="cookieBanner"  id="cookieBanner">
@@ -29,17 +29,31 @@ require_once('config.php');
     <div class="leftMenu" id="leftMenu" style="z-index:1; margin-top:30px;">
       <form class="" action="searchFunction.php" method="POST" id="searchForm">
           <input type="text" name="searchKey" value="" placeholder="SEARCH" id="searchPrimary" >
-          <label id="searchHint" style="font-size:13px; margin-left:calc(-16% - 3px); color:grey;"></label>
+          <label id="searchHint" style="font-size:13px; margin-left:calc(-16% - 3px); color:grey; z-index:-1;position:relative;"></label>
+          <br><br>
+
       </form>
     </div>
 
 
 <div class="centerContent">
+  <table  class="searchResult">
+    <tr>
+      <td id="SR1"><!-- <a href="https://www.instagram.com/puray.ca/"> <img src="static/image/instagram-logo.png" alt=""></a>--></td>
+      <td id="SR2"><!--<a href="#"> <img src="static/image/facebook-logo.png" alt=""> </a>--> </td>
+      <td id="SR3"><!--<a href="#"><img src="static/image/linkedin-logo.png" alt=""> </a>--> </td>
+    </tr>
+    <tr>
+      <td id="SR4"> <!--<a href="https://www.instagram.com/puray.ca/"> <img src="static/image/instagram-logo.png" alt="">--></a></td>
+      <td id="SR5"><!--<a href="#"> <img src="static/image/facebook-logo.png" alt=""> </a> --></td>
+      <td id="SR6"><!--<a href="#"><img src="static/image/linkedin-logo.png" alt=""> </a>--> </td>
+    </tr>
+  </table>
 </div>
 
 
 
-<div class="bottomContent" style="margin-left: 100px; margin-top:750px;" id="bottomContent">
+<div class="bottomContent" style="margin-left: 100px; margin-top:-130px;" id="bottomContent">
   <hr class="divisionLine">
   <div class="emailSubContent">
     <div class="leftBottom">
@@ -124,5 +138,7 @@ require_once('config.php');
 <script type="text/javascript" src="static/js/utility.js"></script>
 <script type="text/javascript" src="static/js/cookieHandler.js"></script>
 <script type="text/javascript" src="static/js/searchUtility.js"></script>
+<script type="text/javascript">
+</script>
 </body>
 </html>
