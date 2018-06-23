@@ -30,7 +30,7 @@ require_once('config.php');
   <input type="text" name="" value="" placeholder="SEARCH" id="search">
   <div class="productList menuTitle" >
     <h3>PRODUCT</h3>
-  <a href="purayModel" style="margin-left: 30px; ">PURAY I</a>
+  <a href="purayModel" style="margin-left: 30px; color:red;">PURAY I</a>
   </div>
   <div class="introduction menuTitle">
     <h3> I.D.E.A</h3>
@@ -44,17 +44,13 @@ require_once('config.php');
     </div>
 
 
-<div class="centerContent">
-  <img src="static/image/PURAYI.JPG" alt="" id="productImg" >
+<div class="centerContent" style="margin-left:calc(50% - 320px); margin-top:-300px; position:relative; z-index:100;">
+  <div class="sketchfab-embed-wrapper"><iframe width="640" height="480" src="https://sketchfab.com/models/fb9b993fddac47d7abd45e226baff5f5/embed?autostart=1" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">  </p> </div>
 </div>
 
 
-<div class="rightContent">
-<h3 id="productName"> HYDROGEN WATER SPRAY</h3>
-<h3 id="price">99 CAD</h3>
-</div>
 
-<div class="bottomContent" style="margin-left: 100px;" id="bottomContent">
+<div class="bottomContent" style="margin-left: 100px; margin-top:200px;" id="bottomContent">
   <hr class="divisionLine">
   <div class="emailSubContent">
     <div class="leftBottom">
@@ -127,7 +123,7 @@ require_once('config.php');
   </div>
 
   <div class="footerContent">
-    <h5 id="purayLogoFooter">PURAY</h5>
+    <h5 id="purayLogoFooter">PURAY/PURAY I</h5>
     <li style="text-align: center; list-style: none; margin-top:-42px; margin-left:-80px;">
   <a id="terms" href="#">Terms & Conditions</a>
 </li>

@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 <link rel="icon" type="image/png" href="static/image/icon.PNG">
 </head>
-<body  onload="loadCookieEnabled();" style="height:700px;background-image: url('/Users/feiranhu/Documents/PurayWebsite/static/image/404_Background.jpg')" >
+<body  onload="loadCookieEnabled();" style="height:700px;background-image: url('/static/image/404_Background.jpg')" >
   <div id="bigBanner" >
     <div class="cookieBanner"  id="cookieBanner">
     <h3>by continuing browse this website, you agree to our use of <a href="#" style="color:grey;   text-decoration: underline;">cookies</a> . These allow us to collect information to improve your experience.</h3>
@@ -27,7 +27,7 @@
   <input type="text" name="" value="" placeholder="SEARCH" id="search">
   <div class="productList menuTitle" >
     <h3>PRODUCT</h3>
-  <a href="#" style="margin-left: 30px; ">PURAY I</a>
+  <a href="purayModel" style="margin-left: 30px; ">PURAY I</a>
   </div>
   <div class="introduction menuTitle">
     <h3> I.D.E.A</h3>

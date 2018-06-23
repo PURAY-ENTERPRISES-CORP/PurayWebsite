@@ -31,7 +31,7 @@
     <input type="text" name="" value="" placeholder="SEARCH" id="search">
     <div class="productList menuTitle" >
       <h3>PRODUCT</h3>
-    <a href="#" style="margin-left: 30px; ">PURAY I</a>
+    <a href="purayModel" style="margin-left: 30px; ">PURAY I</a>
     </div>
     <div class="introduction menuTitle">
       <h3> I.D.E.A</h3>
