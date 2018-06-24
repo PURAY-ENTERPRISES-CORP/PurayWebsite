@@ -111,15 +111,28 @@ console.log(trimedLength);
 if(trimedLength == 0 || emailValue == null){
   $("#emailSubLabel").css("color", "red");
   $("#emailInputBox").css("box-shadow", " -10px 14px 0px -8.9px red");
-  $('#emailReminder').text('This Field is Required.');
   $("#emailReminder").css("visibility","visible");
+  if(language == "en"){
+    $('#emailReminder').text('This Field is Required.');
+}else if(language == "fr"){
+  $('#emailReminder').text('Ce champ est requis.');
+}else if(language == "zh"){
+  $('#emailReminder').text('此项不能为空');
+}
+
   emailReady = false;
 
 }else if(!validateEmail(emailValue)){
   $("#emailSubLabel").css("color", "red");
   $("#emailInputBox").css("box-shadow", " -10px 14px 0px -8.9px red");
-  $('#emailReminder').text('Email address is invalid.');
   $("#emailReminder").css("visibility","visible");
+  if(language == "en"){
+      $('#emailReminder').text('Email address is invalid.');
+}else if(language == "fr"){
+  $('#emailReminder').text('Adresse email invalide.');
+}else if(language == "zh"){
+  $('#emailReminder').text('无效电子邮箱');
+}
   emailReady = false;
 }else{
   $("#emailSubLabel").css("color", "grey");
