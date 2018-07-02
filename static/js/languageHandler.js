@@ -55,7 +55,8 @@ var arrLang = {
 			'siteInPrepare':"Site in preparation. We apologize for any inconvinience.",
 			'agreeOnCookie':"I AGREE",
 			'privacyPolicy':"PRIVACY POLICY",
-			"T&CCapital":"TERMS AND CONDITIONS"
+			"T&CCapital":"TERMS AND CONDITIONS",
+			'home': "HOME"
 		},
 	'zh': {
 		'product': '产品',
@@ -89,7 +90,8 @@ var arrLang = {
 			'siteInPrepare':"网站正在准备中。对于任何不方便，我们深表歉意。",
 			'agreeOnCookie':"我同意",
 			'privacyPolicy':"隐私政策",
-			"T&CCapital":"使用条款"
+			"T&CCapital":"使用条款",
+				'home': "主页"
 	},
 	'fr':{
 		'product': 'PRODUIT',
@@ -123,7 +125,8 @@ var arrLang = {
 			'siteInPrepare':"Site en préparation. Nous nous excusons pour tout inconvénient.",
 			'agreeOnCookie':"JE SUIS D'ACCORD",
 			'privacyPolicy':"POLITIQUE DE CONFIDENTIALITÉ",
-			"T&CCapital":"TERMES ET CONDITIONS"
+			"T&CCapital":"TERMES ET CONDITIONS",
+				'home': "MAISON"
 	}
 };
 //function to apply language

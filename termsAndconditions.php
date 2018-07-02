@@ -28,7 +28,7 @@ require_once('config.php');
 
 <div class="content">
     <div class="leftMenu" id="leftMenu" style="z-index:1; margin-top:30px;">
-      <a href="#" style="margin-left: 10px;" class="lang" key="home">HOME</a>
+      <a href="#" style="margin-left: 10px;">HOME</a>
   <div class="knowledgeTitle" >
   <a href="privacypolicy" style="color:red;" class="lang" key="privacyPolicy">PRIVACY POLICY</a>
   <a href="#" class="lang" key="T&CCapital">TERMS AND CONDITIONS</a>
@@ -70,7 +70,7 @@ After your transaction is completed, your purchase transaction information is de
    of three years, PURAY may again contact the customer in question in order to discover if the latter wishes (i) to continue to receive newsletters and other publications from PURAY and/or (ii) to keep his or her customer account on the Website. Your data will moreover be destroyed within a maximum of two business days following receipt of an unsubscribe request from you.</p>
    <p>&nbsp;</p>
   <h2>6. CONTACT INFORMATION </h2>
-  <p>If you would like to opt-out by withdrawing your consent for us to contact you, use or disclosure of your information, or you would like to learn more about this Privacy Policy, you may contact us at <a href="mailto:clientservices@puray.ca" style="text-decoration:underline;">clientservices@puray.ca</a> at any time.</p>
+  <p>If you would like to opt-out by withdrawing your consent for us to contact you, use or disclosure of your information, or you would like to learn more about this Privacy Policy, you may contact us at support@puray.ca at any time.</p>
   </div>
 </div>
 
