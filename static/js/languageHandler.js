@@ -141,21 +141,21 @@ function applyLanguage() {
 		} );
 		if(language == "en"){
 			$("#search").attr("placeholder","SEARCH");
-		  $("#agreementEmailSub").html("I have read, understood and agree to the  <a href='privacypolicy'>Privacy Policy</a> and the  <br> <a>Terms of Use</a>")	;
+		  $("#agreementEmailSub").html("I have read, understood and agree to the  <a href='privacypolicy'>Privacy Policy</a> and the  <br> <a href='termsAndconditions'>Terms of Use</a>")	;
 			$("#commentTextArea").attr("placeholder","COMMENT");
 			$("#enquirySuccess").html("<p>Enquiry <br><br>We recieved your enquiry.  <br><br> An advisor will respond to you in English, French or Mandarin <br> <br> within 24 hours, from Monday to Saturday.</p>")
 			$("#searchPrimary").attr("placeholder","SEARCH");
 			$("#cookieContent").html("by continuing browse this website, you agree to our use of <a href='#' style='color:grey;   text-decoration: underline;'>cookies</a> . These allow us to collect information to improve your experience.");
 		}else if(language == "fr"){
 			$("#search").attr("placeholder","CHERCHER");
-			$("#agreementEmailSub").html("J'ai lu, compris et accepté le  <a href='privacypolicy'>Politique de confidentialité</a> et le  <br> <a> Conditions d'utilisation </a>")	;
+			$("#agreementEmailSub").html("J'ai lu, compris et accepté le  <a href='privacypolicy'>Politique de confidentialité</a> et le  <br> <a href='termsAndconditions'> Conditions d'utilisation </a>")	;
 			$("#commentTextArea").attr("placeholder","COMMENTAIRE");
 			$("#enquirySuccess").html("<p>Enquête <br><br>Nous avons reçu votre demande.  <br><br> Un conseiller vous répondra en anglais, français ou mandarin <br> <br> dans les 24 heures, du lundi au samedi.</p>")
 			$("#searchPrimary").attr("placeholder","CHERCHER");
 			$("#cookieContent").html("En poursuivant votre navigation sur ce site, vous acceptez l'utilisation de <a href='#' style='color:grey;   text-decoration: underline;'>cookies</a> . Ceux-ci nous permettent de collecter des informations pour améliorer votre expérience.");
 		}else if(language == "zh"){
 			$("#search").attr("placeholder","搜索");
-			$("#agreementEmailSub").html("我已阅读理解并同意  <a href='privacypolicy'>隐私政策</a> 以及  <br> <a>使用条款</a>")	;
+			$("#agreementEmailSub").html("我已阅读理解并同意  <a href='privacypolicy'>隐私政策</a> 以及  <br> <a href='termsAndconditions'>使用条款</a>")	;
 			$("#commentTextArea").attr("placeholder","留言");
 			$("#enquirySuccess").html("<p>请求 <br><br>我们收到了您的请求.  <br><br> 顾问将在周一至周六的24小时内以英文，法文或普通话 <br> <br> 回复您</p>")
 			$("#searchPrimary").attr("placeholder","搜索");

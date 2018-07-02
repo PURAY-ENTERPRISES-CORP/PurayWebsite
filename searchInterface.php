@@ -129,7 +129,7 @@ require_once('config.php');
   <div class="footerContent">
     <h5 id="purayLogoFooter">PURAY</h5>
     <li style="text-align: center; list-style: none; margin-top:-42px; margin-left:-80px;">
-  <a id="terms" href="#" class="lang" key="T&C">Terms & Conditions</a>
+  <a id="terms" href="termsAndconditions" class="lang" key="T&C">Terms & Conditions</a>
 </li>
   </div>
 
