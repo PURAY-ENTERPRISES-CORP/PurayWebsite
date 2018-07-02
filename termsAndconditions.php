@@ -28,10 +28,10 @@ require_once('config.php');
 
 <div class="content">
     <div class="leftMenu" id="leftMenu" style="z-index:1; margin-top:30px;">
-      <a href="#" style="margin-left: 10px;">HOME</a>
+      <a href="\" style="margin-left: 10px;" class="lang" key="home">HOME</a>
   <div class="knowledgeTitle" >
-  <a href="privacypolicy" style="color:red;" class="lang" key="privacyPolicy">PRIVACY POLICY</a>
-  <a href="#" class="lang" key="T&CCapital">TERMS AND CONDITIONS</a>
+  <a href="privacypolicy" class="lang" key="privacyPolicy">PRIVACY POLICY</a>
+  <a href="termsAndconditions" class="lang" key="T&CCapital" style="color:red;">TERMS AND CONDITIONS</a>
   <a href="#" class="lang" key="cookies">COOKIES</a>
   </div>
 
@@ -42,35 +42,21 @@ require_once('config.php');
 
 <div class="centerContent" style="margin-left:calc(50% - 320px); margin-top:-160px; position:relative; z-index:100;">
   <div class="privacyPolicy">
-    <h2>PRIVACY AND DATA PROTECTION POLICY</h2>
+    <h2>TERMS & CONDITIONS</h2>
     <h2>LAST UPDATED: 1 JULY 2018</h2>
-    <p>You can print a full copy of our Privacy and Data Protection Policy from your browser by pressing CTRL+P in Windows and Linux or ⌘+P from a Mac</p>
+    <p>You can print a full copy of our Terms & Conditons from your browser by pressing CTRL+P in Windows and Linux or ⌘+P from a Mac</p>
     <p>&nbsp;</p>
-    <h2>I. CONSENT</h2>
-    <p style="text-decoration:underline;">How do you get my consent? </p>
-    <p>When you provide us with personal information to complete a transaction, verify your credit card, place an order, arrange for a delivery or return a purchase, you consent to Puray’s collection, use, disclosure, and retention of your information for that specific reason only and as otherwise permitted by law.</p>
-  <p>&nbsp;</p>
-  <p>If we ask for your personal information for a secondary reason, like marketing, we will either ask you directly for your expressed consent, or provide you with an opportunity to say no. For example, when you sign up for an account, you have the option to permit us to send you emails about our new products, promotions, announcements and other updates. </p>
-  <p>&nbsp;</p>
-  <h2>2. DISCLOSURE </h2>
-  <p>We may disclose your personal information if we are required by law to do so or if you violate our Terms of Service. We may also disclose your personal information if we reasonably believe the disclosure is necessary or appropriate to protect and enforce our legal rights, interests and remedies or protect the business, operations or customers of us or other persons (including detecting and preventing fraud and preventing violation of the terms of use that govern our websites).</p>
-  <p>&nbsp;</p>
-  <h2>3. SHOPIFY</h2>
-  <p>We use Shopify Inc., an online e-commerce platform, to sell our products and services to you. Your data is stored through Shopify’s data storage, databases and the general Shopify application. They store your data on a secure server behind a firewall. </p>
-  <p>&nbsp;</p>
-  <p style="text-decoration:underline;">Payment:</p>
-  <p>By using a direct payment gateway, Shopify stores your data which is encrypted through the Payment Card Industry Data Security Standard (PCI-DSS).
-After your transaction is completed, your purchase transaction information is deleted. For more information, you may also want to read Shopify’s Terms of Service (https://www.shopify.com/legal/terms) or Shopify’s Privacy Policy (https://www.shopify.com/legal/privacy). </p>
-  <p>&nbsp;</p>
-  <h2>4. THIRD-PARTY SERVICES </h2>
-  <p>In general, third-party service providers, such as payment gateways, have their own pricy policies and terms of use. We strongly recommend that you read their privacy policies in order to understand how your personal information will be used and stored by these third-party service providers. You are no longer governed by our Privacy Policy or Terms of Use if you click third-party website links and are redirected to their websites. </p>
-  <p>&nbsp;</p>
-  <h2>5. CHANGES TO THIS PRIVACY POLICY </h2>
-  <p>We reserve the right to modify this privacy policy at any time. Changes and clarifications will take effect immediately upon their posting on the website. If there is significant change to this policy, we will notify you on our website, or through email, if applicable.
-   of three years, PURAY may again contact the customer in question in order to discover if the latter wishes (i) to continue to receive newsletters and other publications from PURAY and/or (ii) to keep his or her customer account on the Website. Your data will moreover be destroyed within a maximum of two business days following receipt of an unsubscribe request from you.</p>
-   <p>&nbsp;</p>
-  <h2>6. CONTACT INFORMATION </h2>
-  <p>If you would like to opt-out by withdrawing your consent for us to contact you, use or disclosure of your information, or you would like to learn more about this Privacy Policy, you may contact us at support@puray.ca at any time.</p>
+    <p>Welcome to the PURAY website. We hope you are having satisfying experience. Your use of our website constitutes your agreement to these terms. This is how we collect your personal information on this website and how we protect it.</p>
+    <p>&nbsp;</p>
+    <p>When you visit this website, we use cookies to provide you better browsing experience. For more information about cookies, such as how to block cookies, please refer to our Privacy Policy. This allows us to understand your interests and serve you ads or promotional offers according to your interests.</p>
+    <p>&nbsp;</p>
+    <p>When you make your purchases or open your personal account, you provide us your personal information requested and necessary to place the order and have your purchase delivered.</p>
+    <p>&nbsp;</p>
+    <p>After you make a purchase, we may also contact you to enquire about your shopping experience through email, if applicable. You can easily refuse to participate by clicking the relevant link on our survey email.  If you wish not to receive further updates about our new products, announcement, promotions, you can unsubscribe anytime by selecting the unsubscribe options in the “Email Preference” section of your account on the PURAY website.
+      If you wish to delete your account, please refer to the Contact Information below.</p>
+    <p>&nbsp;</p>
+  <h2>Contact Information </h2>
+  <p>If you would like to opt-out by withdrawing your consent for us to contact you, use or disclosure of your information, or you would like to learn more about this Terms and Conditions, or you would like your account to be deleted, you may contact us at <a href="mailto:clientservices@puray.ca" style="text-decoration:underline;">clientservices@puray.ca</a> at any time.</p>
   </div>
 </div>
 
@@ -149,9 +135,9 @@ After your transaction is completed, your purchase transaction information is de
   </div>
 
   <div class="footerContent">
-    <h5 id="purayLogoFooter">PURAY/PRIVACY POLICY</h5>
+    <h5 id="purayLogoFooter">PURAY/TERMS & CONDITIONS</h5>
     <li style="text-align: center; list-style: none; margin-top:-42px; margin-left:-80px;">
-  <a id="terms" href="#" class="lang" key="T&C">Terms & Conditions</a>
+  <a id="terms" href="termsAndconditions" class="lang" key="T&C">Terms & Conditions</a>
 </li>
   </div>
 

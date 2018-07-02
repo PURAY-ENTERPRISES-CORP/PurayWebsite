@@ -28,10 +28,10 @@ require_once('config.php');
 
 <div class="content">
     <div class="leftMenu" id="leftMenu" style="z-index:1; margin-top:30px;">
-      <a href="#" style="margin-left: 10px;" class="lang" key="home">HOME</a>
+      <a href="\" style="margin-left: 10px;" class="lang" key="home">HOME</a>
   <div class="knowledgeTitle" >
   <a href="privacypolicy" style="color:red;" class="lang" key="privacyPolicy">PRIVACY POLICY</a>
-  <a href="#" class="lang" key="T&CCapital">TERMS AND CONDITIONS</a>
+  <a href="termsAndconditions" class="lang" key="T&CCapital">TERMS AND CONDITIONS</a>
   <a href="#" class="lang" key="cookies">COOKIES</a>
   </div>
 
@@ -151,7 +151,7 @@ After your transaction is completed, your purchase transaction information is de
   <div class="footerContent">
     <h5 id="purayLogoFooter">PURAY/PRIVACY POLICY</h5>
     <li style="text-align: center; list-style: none; margin-top:-42px; margin-left:-80px;">
-  <a id="terms" href="#" class="lang" key="T&C">Terms & Conditions</a>
+  <a id="terms" href="termsAndconditions" class="lang" key="T&C">Terms & Conditions</a>
 </li>
   </div>
 
