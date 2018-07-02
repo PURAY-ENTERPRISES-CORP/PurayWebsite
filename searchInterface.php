@@ -9,17 +9,18 @@
 <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 <link rel="icon" type="image/png" href="static/image/icon.PNG">
 </head>
-<body onload="loadCookieEnabled(); focusSearchBox();">
+<body onload="loadCookieEnabled(); focusSearchBox(); loadLanguage();">
 <?php
-//require_once('config.php');
+require_once('config.php');
  ?>
   <div id="bigBanner" >
     <div class="cookieBanner"  id="cookieBanner">
-    <h3>by continuing browse this website, you agree to our use of <a href="#" style="color:grey;   text-decoration: underline;">cookies</a> . These allow us to collect information to improve your experience.</h3>
-    <a  id="cookieAgreement" href="#" onclick="cookieAgree();">I AGREE</a>
+      <h3 id="cookieContent">by continuing browse this website, you agree to our use of <a href="#" style="color:grey;   text-decoration: underline;">cookies</a> . These allow us to collect information to improve your experience.</h3>
+      <a  id="cookieAgreement" href="#" onclick="cookieAgree();" class="lang" key="agreeOnCookie">I AGREE</a>
     </div>
 
     <div class="header" id="myHeader" style="z-index: -1;">
+      <h3 class="lang" key="siteInPrepare">Site in preparation. We apologize for any inconvinience.</h3>
       <a href="\">PURAY</a>
     </div>
   </div>
@@ -53,28 +54,28 @@
 
 
 
-<div class="bottomContent" style="margin-left: 100px; margin-top:-130px;" id="bottomContent">
+<div class="bottomContent" style="margin-left: 100px; margin-top:250px;" id="bottomContent">
   <hr class="divisionLine">
   <div class="emailSubContent">
     <div class="leftBottom">
-      <h4>NEWSLETTER</h4>
+      <h4 class="lang" key="newsletter">NEWSLETTER</h4>
       <form class="" action="\" method="post" name="emailSubscription" id="emailSubscribeForm">
         <div class="emailSubscription" id="emailSubscription">
           <input type="text" name="emailAddress" value="" id="emailSub">
-          <label id="emailLabel">EMAIL</label>
-          <h5 id="notValidEmail">Please enter a valid email address.</h5>
+          <label id="emailLabel" class="lang" key="email">EMAIL</label>
+          <h5 id="notValidEmail" class="lang" key="invalidEmail">Please enter a valid email address.</h5>
           <div class="emailFormOther" id="emailFormOther">
           <div class="checkbox">
         <input type="checkbox" id="checkbox_1">
-        <label for="checkbox_1">I have read, understood and agree to the  <a href="#">Privacy Policy</a> and the  <br> <a href="#">Terms of Use</a></label>
+        <label for="checkbox_1" id="agreementEmailSub">I have read, understood and agree to the  <a href="#">Privacy Policy</a> and the  <br> <a href="#">Terms of Use</a></label>
             </div>
         <div class="submitForm">
                <input type="submit" name="submitEmailSub" value="REGISTER" id="submitEmail"  disabled>
-               <label for="submitEmail" id="submitEmailLabel">REGISTER</label>
+               <label for="submitEmail" id="submitEmailLabel"  class="lang" key="register">REGISTER</label>
         </div>
           </div>
         </div>
-          <h3 id="thankSubscription">Thank you for your registration.</h3>
+          <h3 id="thankSubscription" class="lang" key="thankSubscription">Thank you for your registration.</h3>
       </form>
 
 
@@ -107,16 +108,16 @@
     <div class="rightBottom">
       <table style="border-spacing: 50px 0; ">
         <tr>
-          <td><a href="contact">Contact</a></td>
+          <td><a href="contact" class="lang" key="contactBtm">Contact</a></td>
           <td><a href="https://www.instagram.com/puray.ca/">Instagram</a></td>
-          <td>Language &nbsp;&nbsp;
+          <td><span class="lang" key="languagePref">Language</span> &nbsp;&nbsp;
 <div class="languageSelector">
-  <a href="#">EN</a> / <a href="#">FR</a> / <a href="#">CN</a>
+  <a id="EN">EN</a> / <a id="FR">FR</a> / <a id="CN">CN</a>
 </div>
 </td>
         </tr>
         <tr>
-          <td><a href="wechat">Wechat</a></td>
+          <td><a href="wechat" class="lang" key="wechat">Wechat</a></td>
           <td><a href="#">LinkedIn</a></td>
           <td><a href="https://www.facebook.com/puraybeauty">Facebook</a></td>
         </tr>
@@ -128,7 +129,7 @@
   <div class="footerContent">
     <h5 id="purayLogoFooter">PURAY</h5>
     <li style="text-align: center; list-style: none; margin-top:-42px; margin-left:-80px;">
-  <a id="terms" href="#">Terms & Conditions</a>
+  <a id="terms" href="#" class="lang" key="T&C">Terms & Conditions</a>
 </li>
   </div>
 
@@ -138,7 +139,6 @@
 <script type="text/javascript" src="static/js/utility.js"></script>
 <script type="text/javascript" src="static/js/cookieHandler.js"></script>
 <script type="text/javascript" src="static/js/searchUtility.js"></script>
-<script type="text/javascript">
-</script>
+<script type="text/javascript" src="static/js/languageHandler.js"></script>
 </body>
 </html>

@@ -51,7 +51,11 @@ var arrLang = {
 			'submitBtn':"SUBMIT",
 			'cancelBtn':"CANCEL",
 			'reminder':"This Field is Required.",
-			'phoneReminder' : "Invalid Phone Number."
+			'phoneReminder' : "Invalid Phone Number.",
+			'siteInPrepare':"Site in preparation. We apologize for any inconvinience.",
+			'agreeOnCookie':"I AGREE",
+			'privacyPolicy':"PRIVACY POLICY",
+			"T&CCapital":"TERMS AND CONDITIONS"
 		},
 	'zh': {
 		'product': '产品',
@@ -81,7 +85,11 @@ var arrLang = {
 			'submitBtn':"提交",
 			'cancelBtn':"取消",
 			'reminder':"此项不能为空",
-			'phoneReminder' : "无效电话号码"
+			'phoneReminder' : "无效电话号码",
+			'siteInPrepare':"网站正在准备中。对于任何不方便，我们深表歉意。",
+			'agreeOnCookie':"我同意",
+			'privacyPolicy':"隐私政策",
+			"T&CCapital":"使用条款"
 	},
 	'fr':{
 		'product': 'PRODUIT',
@@ -97,7 +105,7 @@ var arrLang = {
 		'contactBtm':"Contact",
 		'wechat':"Wechat",
 		'languagePref':"La langue",
-		'T&C':"	Termes et conditions",
+		'T&C':"	Termes et Conditions",
 		'sendEnquiry':"ENVOYER ENQUÊTE",
 		'thankSubscription':"Merci pour votre inscription.",
 		'contactEx1':"Vous pouvez nous envoyer un courriel à",
@@ -111,7 +119,11 @@ var arrLang = {
 		'submitBtn':"SOUMETTRE",
 		'cancelBtn':"ANNULER",
 		'reminder':"Ce champ est requis.",
-		'phoneReminder' : "Numéro de téléphone invalide."
+		'phoneReminder' : "Numéro de téléphone invalide.",
+			'siteInPrepare':"Site en préparation. Nous nous excusons pour tout inconvénient.",
+			'agreeOnCookie':"JE SUIS D'ACCORD",
+			'privacyPolicy':"POLITIQUE DE CONFIDENTIALITÉ",
+			"T&CCapital":"TERMES ET CONDITIONS"
 	}
 };
 //function to apply language
@@ -126,20 +138,25 @@ function applyLanguage() {
 		} );
 		if(language == "en"){
 			$("#search").attr("placeholder","SEARCH");
-		  $("#agreementEmailSub").html("I have read, understood and agree to the  <a>Privacy Policy</a> and the  <br> <a>Terms of Use</a>")	;
+		  $("#agreementEmailSub").html("I have read, understood and agree to the  <a href='privacypolicy'>Privacy Policy</a> and the  <br> <a>Terms of Use</a>")	;
 			$("#commentTextArea").attr("placeholder","COMMENT");
 			$("#enquirySuccess").html("<p>Enquiry <br><br>We recieved your enquiry.  <br><br> An advisor will respond to you in English, French or Mandarin <br> <br> within 24 hours, from Monday to Saturday.</p>")
+			$("#searchPrimary").attr("placeholder","SEARCH");
+			$("#cookieContent").html("by continuing browse this website, you agree to our use of <a href='#' style='color:grey;   text-decoration: underline;'>cookies</a> . These allow us to collect information to improve your experience.");
 		}else if(language == "fr"){
 			$("#search").attr("placeholder","CHERCHER");
-			$("#agreementEmailSub").html("J'ai lu, compris et accepté le  <a>Politique de confidentialité</a> et le  <br> <a> Conditions d'utilisation </a>")	;
+			$("#agreementEmailSub").html("J'ai lu, compris et accepté le  <a href='privacypolicy'>Politique de confidentialité</a> et le  <br> <a> Conditions d'utilisation </a>")	;
 			$("#commentTextArea").attr("placeholder","COMMENTAIRE");
 			$("#enquirySuccess").html("<p>Enquête <br><br>Nous avons reçu votre demande.  <br><br> Un conseiller vous répondra en anglais, français ou mandarin <br> <br> dans les 24 heures, du lundi au samedi.</p>")
+			$("#searchPrimary").attr("placeholder","CHERCHER");
+			$("#cookieContent").html("En poursuivant votre navigation sur ce site, vous acceptez l'utilisation de <a href='#' style='color:grey;   text-decoration: underline;'>cookies</a> . Ceux-ci nous permettent de collecter des informations pour améliorer votre expérience.");
 		}else if(language == "zh"){
 			$("#search").attr("placeholder","搜索");
-			$("#agreementEmailSub").html("我已阅读理解并同意  <a>隐私政策</a> 以及  <br> <a>使用条款</a>")	;
+			$("#agreementEmailSub").html("我已阅读理解并同意  <a href='privacypolicy'>隐私政策</a> 以及  <br> <a>使用条款</a>")	;
 			$("#commentTextArea").attr("placeholder","留言");
 			$("#enquirySuccess").html("<p>请求 <br><br>我们收到了您的请求.  <br><br> 顾问将在周一至周六的24小时内以英文，法文或普通话 <br> <br> 回复您</p>")
-
+			$("#searchPrimary").attr("placeholder","搜索");
+			$("#cookieContent").html("继续浏览本网站，则表明您同意我们的<a href='#' style='color:grey;   text-decoration: underline;'>cookies</a>使用政策。这将有助我们收集相关信息，并改进我们的网站。");
 		}
 
 }

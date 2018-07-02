@@ -38,6 +38,18 @@ z-index: 3;
   margin-top: -26px;
 }
 
+
+.header h3{
+  color: red;
+  font-size:13px;
+  font-weight: 100;
+  letter-spacing: 1px;
+  font-family: "Quicksand", sans-serif;
+text-align: center;
+margin-top: -10px;
+
+}
+
 .header {
   padding: 20px  0px;
   background: rgba(27,27,27,0);
@@ -220,6 +232,16 @@ a:hover{
 .productList{
   margin-left: 10px;
   margin-top: 50px;
+}
+
+.knowledgeTitle{
+  margin-left: 10px;
+  margin-top: 50px;
+}
+
+.knowledgeTitle a{
+  display: block;
+  line-height: 30px;
 }
 
 .introduction{
@@ -687,4 +709,27 @@ display: none;
 .searchResult img{
   width:120px;
   height:auto;
+}
+
+
+.privacyPolicy{
+margin-left:100px;
+width:500px;
+
+}
+.privacyPolicy h2{
+  font-size:11px;
+  letter-spacing: 0.06rem;
+}
+
+.privacyPolicy p{
+  font-size:11px;
+  line-height: 1.82;
+  letter-spacing: 0.06rem;
+}
+
+.privacyPolicy ul{
+  font-size:11px;
+  line-height: 1.82;
+  letter-spacing: 0.06rem;
 }

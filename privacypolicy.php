@@ -11,7 +11,7 @@
 </head>
 <body onload="loadCookieEnabled(); loadLanguage();">
 <?php
-require_once('config.php');
+//require_once('config.php');
  ?>
   <div id="bigBanner" >
     <div class="cookieBanner"  id="cookieBanner">
@@ -28,34 +28,59 @@ require_once('config.php');
 
 <div class="content">
     <div class="leftMenu" id="leftMenu" style="z-index:1; margin-top:30px;">
-  <input type="text" name="" value="" placeholder="SEARCH" id="search">
-  <div class="productList menuTitle" >
-    <h3 class="lang" key="product">PRODUCT</h3>
-  <a href="purayModel" style="margin-left: 30px; color:red;">PURAY I</a>
-  </div>
-  <div class="introduction menuTitle">
-    <h3 class="lang" key="idea"> I.D.E.A</h3>
-    <a href="#"  class="lang" key="naturalBeauty">YOUR NATURAL BEAUTY</a>
-    <a href="#" class="lang" key="smartHealth">YOUR SMART HEALTH</a>
+      <a href="#" style="margin-left: 10px;">HOME</a>
+  <div class="knowledgeTitle" >
+  <a href="privacypolicy" style="color:red;" class="lang" key="privacyPolicy">PRIVACY POLICY</a>
+  <a href="#" class="lang" key="T&CCapital">TERMS AND CONDITIONS</a>
+  <a href="#" class="lang" key="cookies">COOKIES</a>
   </div>
 
-  <div class="contactUs menuTitle">
-  <a href="contact" style="margin-left:0px;" class="lang" key="contactUs">CONTACT US</a>
-  </div>
+
+
     </div>
 
 
-<div class="centerContent" style="margin-left:calc(50% - 320px); margin-top:-300px; position:relative; z-index:100;">
-  <div class="sketchfab-embed-wrapper"><iframe width="640" height="480" src="https://sketchfab.com/models/fb9b993fddac47d7abd45e226baff5f5/embed?autostart=1" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">  </p> </div>
+<div class="centerContent" style="margin-left:calc(50% - 320px); margin-top:-160px; position:relative; z-index:100;">
+  <div class="privacyPolicy">
+    <h2>PRIVACY AND DATA PROTECTION POLICY</h2>
+    <h2>LAST UPDATED: 1 JULY 2018</h2>
+    <p>You can print a full copy of our Privacy and Data Protection Policy from your browser by pressing CTRL+P in Windows and Linux or ⌘+P from a Mac</p>
+    <p>&nbsp;</p>
+    <h2>I. CONSENT</h2>
+    <p style="text-decoration:underline;">How do you get my consent? </p>
+    <p>When you provide us with personal information to complete a transaction, verify your credit card, place an order, arrange for a delivery or return a purchase, you consent to Puray’s collection, use, disclosure, and retention of your information for that specific reason only and as otherwise permitted by law.</p>
+  <p>&nbsp;</p>
+  <p>If we ask for your personal information for a secondary reason, like marketing, we will either ask you directly for your expressed consent, or provide you with an opportunity to say no. For example, when you sign up for an account, you have the option to permit us to send you emails about our new products, promotions, announcements and other updates. </p>
+  <p>&nbsp;</p>
+  <h2>2. DISCLOSURE </h2>
+  <p>We may disclose your personal information if we are required by law to do so or if you violate our Terms of Service. We may also disclose your personal information if we reasonably believe the disclosure is necessary or appropriate to protect and enforce our legal rights, interests and remedies or protect the business, operations or customers of us or other persons (including detecting and preventing fraud and preventing violation of the terms of use that govern our websites).</p>
+  <p>&nbsp;</p>
+  <h2>3. SHOPIFY</h2>
+  <p>We use Shopify Inc., an online e-commerce platform, to sell our products and services to you. Your data is stored through Shopify’s data storage, databases and the general Shopify application. They store your data on a secure server behind a firewall. </p>
+  <p>&nbsp;</p>
+  <p style="text-decoration:underline;">Payment:</p>
+  <p>By using a direct payment gateway, Shopify stores your data which is encrypted through the Payment Card Industry Data Security Standard (PCI-DSS).
+After your transaction is completed, your purchase transaction information is deleted. For more information, you may also want to read Shopify’s Terms of Service (https://www.shopify.com/legal/terms) or Shopify’s Privacy Policy (https://www.shopify.com/legal/privacy). </p>
+  <p>&nbsp;</p>
+  <h2>4. THIRD-PARTY SERVICES </h2>
+  <p>In general, third-party service providers, such as payment gateways, have their own pricy policies and terms of use. We strongly recommend that you read their privacy policies in order to understand how your personal information will be used and stored by these third-party service providers. You are no longer governed by our Privacy Policy or Terms of Use if you click third-party website links and are redirected to their websites. </p>
+  <p>&nbsp;</p>
+  <h2>5. CHANGES TO THIS PRIVACY POLICY </h2>
+  <p>We reserve the right to modify this privacy policy at any time. Changes and clarifications will take effect immediately upon their posting on the website. If there is significant change to this policy, we will notify you on our website, or through email, if applicable.
+   of three years, PURAY may again contact the customer in question in order to discover if the latter wishes (i) to continue to receive newsletters and other publications from PURAY and/or (ii) to keep his or her customer account on the Website. Your data will moreover be destroyed within a maximum of two business days following receipt of an unsubscribe request from you.</p>
+   <p>&nbsp;</p>
+  <h2>6. CONTACT INFORMATION </h2>
+  <p>If you would like to opt-out by withdrawing your consent for us to contact you, use or disclosure of your information, or you would like to learn more about this Privacy Policy, you may contact us at support@puray.ca at any time.</p>
+  </div>
 </div>
 
 
 
-<div class="bottomContent" style="margin-left: 100px; margin-top:200px;" id="bottomContent">
+<div class="bottomContent" style="margin-left: 100px; margin-top:30px;" id="bottomContent">
   <hr class="divisionLine">
   <div class="emailSubContent">
     <div class="leftBottom">
-      <h4>NEWSLETTER</h4>
+      <h4 class="lang" key="newsletter">NEWSLETTER</h4>
       <form class="" action="\" method="post" name="emailSubscription" id="emailSubscribeForm">
         <div class="emailSubscription" id="emailSubscription">
           <input type="text" name="emailAddress" value="" id="emailSub">
@@ -124,16 +149,16 @@ require_once('config.php');
   </div>
 
   <div class="footerContent">
-    <h5 id="purayLogoFooter">PURAY/PURAY I</h5>
+    <h5 id="purayLogoFooter">PURAY/PRIVACY POLICY</h5>
     <li style="text-align: center; list-style: none; margin-top:-42px; margin-left:-80px;">
-  <a id="terms" href="#">Terms & Conditions</a>
+  <a id="terms" href="#" class="lang" key="T&C">Terms & Conditions</a>
 </li>
   </div>
 
 </div>
 </div>
 <script type="text/javascript" src="static/js/jquery.js"></script>
-<script type="text/javascript" src="static/js/utility.js"></script>
+<script type="text/javascript" src="static/js/privacyUtility.js"></script>
 <script type="text/javascript" src="static/js/cookieHandler.js"></script>
 <script type="text/javascript" src="static/js/languageHandler.js"></script>
 </body>

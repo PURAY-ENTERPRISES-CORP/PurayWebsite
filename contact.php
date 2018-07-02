@@ -16,11 +16,12 @@
      ?>
     <div id="bigBanner" >
       <div class="cookieBanner"  id="cookieBanner">
-      <h3>by continuing browse this website, you agree to our use of <a href="#" style="color:grey;   text-decoration: underline;">cookies</a> . These allow us to collect information to improve your experience.</h3>
-      <a  id="cookieAgreement" href="#" onclick="cookieAgree();">I AGREE</a>
+        <h3 id="cookieContent">by continuing browse this website, you agree to our use of <a href="#" style="color:grey;   text-decoration: underline;">cookies</a> . These allow us to collect information to improve your experience.</h3>
+        <a  id="cookieAgreement" href="#" onclick="cookieAgree();" class="lang" key="agreeOnCookie">I AGREE</a>
       </div>
 
       <div class="header" id="myHeader" style="z-index: -1;">
+        <h3 class="lang" key="siteInPrepare">Site in preparation. We apologize for any inconvinience.</h3>
         <a href="/">PURAY</a>
       </div>
     </div>

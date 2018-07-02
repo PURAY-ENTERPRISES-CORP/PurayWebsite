@@ -68,7 +68,7 @@ require_once('config.php');
           <div class="emailFormOther" id="emailFormOther">
           <div class="checkbox">
         <input type="checkbox" id="checkbox_1">
-        <label for="checkbox_1" id="agreementEmailSub">I have read, understood and agree to the  <a href="privacypolicy">Privacy Policy</a> and the  <br> <a>Terms of Use</a></label>
+        <label for="checkbox_1" id="agreementEmailSub">I have read, understood and agree to the  <a>Privacy Policy</a> and the  <br> <a>Terms of Use</a></label>
             </div>
         <div class="submitForm">
                <input type="submit" name="submitEmailSub" value="REGISTER" id="submitEmail"  disabled>
