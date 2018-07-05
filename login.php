@@ -9,14 +9,14 @@
 <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 <link rel="icon" type="image/png" href="static/image/icon.PNG">
 </head>
-<body onload="loadCookieEnabled(); loadLanguage();">
+<body onload="loadCookieEnabled(); loadLanguage();" style="height:500px;">
 <?php
 require_once('config.php');
  ?>
   <div id="bigBanner" >
     <div class="cookieBanner"  id="cookieBanner">
-    <h3 id="cookieContent">by continuing browse this website, you agree to our use of <a href="#" style="color:grey;   text-decoration: underline;">cookies</a> . These allow us to collect information to improve your experience.</h3>
-    <a  id="cookieAgreement" href="#" onclick="cookieAgree();" class="lang" key="agreeOnCookie">I AGREE</a>
+      <h3 id="cookieContent">by continuing browse this website, you agree to our use of <a href="#" style="color:grey;   text-decoration: underline;">cookies</a> . These allow us to collect information to improve your experience.</h3>
+      <a  id="cookieAgreement" href="#" onclick="cookieAgree();" class="lang" key="agreeOnCookie">I AGREE</a>
     </div>
 
     <div class="header" id="myHeader" style="z-index: -1;">
@@ -28,34 +28,50 @@ require_once('config.php');
 
 <div class="content">
     <div class="leftMenu" id="leftMenu" style="z-index:1; margin-top:30px;">
-  <input type="text" name="" value="" placeholder="SEARCH" id="search">
-  <div class="productList menuTitle" >
-    <h3 class="lang" key="product">PRODUCT</h3>
-  <a href="purayModel" style="margin-left: 30px; ">PURAY I</a>
-  </div>
-  <div class="introduction menuTitle">
-    <h3 class="lang" key="idea"> I.D.E.A</h3>
-    <a href="#" class="lang" key="naturalBeauty">YOUR NATURAL BEAUTY</a>
-    <a href="#" class="lang" key="smartHealth">YOUR SMART HEALTH</a>
+      <a href="\" style="margin-left: 10px;" class="lang" key="home">HOME</a>
+  <div class="knowledgeTitle" >
+  <a href="login" style="color:red;" class="lang" key="login">LOG IN</a>
+  <a href="register" class="lang" key="signup">SIGN UP</a>
   </div>
 
-  <div class="contactUs menuTitle">
-  <a href="contact" style="margin-left:0px;" class="lang" key="contactUs">CONTACT US</a>
-  </div>
+
+
     </div>
 
 
-<div class="centerContent">
-  <img src="static/image/PURAYI.JPG" alt="" id="productImg" >
+<div class="centerContent" style="margin-left:calc(50% - 150px); margin-top:-80px; position:relative; z-index:100;">
+  <div class="login">
+    <h2 class="lang" key="loginTitle">Log In</h2>
+    <br>
+    <h3 id="invalidCredential">Invalid credentials. Please try again.</h3>
+    <form class="" action="loginFunction.php" method="post" id="loginForm">
+      <div class="usernameInput">
+        <input type="text" name="loginUserName" value="" placeholder="" id="userNameInputBox" class="fieldInput">
+        <label id="userNameLabel" class="userNameLabel fieldLabel lang" key="userNameLabel">EMAIL</label>
+        <h3 id="userNameReminder" class="reminder lang" key="emailLogIn">This Field is Required.</h3>
+      </div>
+      <div class="passwordInput">
+        <input type="password" name="loginPassword" value="" placeholder="" id="passwordInputBox" class="fieldInput">
+        <label id="passwordLabel" class="passwordLabel fieldLabel lang" key="passwordLabel">PASSWORD</label>
+        <h3 id="passwordReminder" class="reminder lang" key="reminder">This Field is Required.</h3>
+      </div>
+      <br>
+      <div class="signin">
+        <input type="submit" name="" value="SUBMIT"  id="submitSignin" disabled>
+        <label for="submitSignin" id="signInButton" class="lang" key="signin">SIGN IN</label>
+        <input type="submit" name="" value="SUBMIT"  id="submitSignin" disabled>
+        <a  style="margin-left: calc(40% - 140px);" id="signUpButton" href="register" >SIGN UP</a>
+      </div>
+
+    </form>
+
+  </div>
+
 </div>
 
 
-<div class="rightContent">
-<h3 id="productName" class="lang" key="productName" > HYDROGEN WATER SPRAY</h3>
-<h3 id="price">99 CAD</h3>
-</div>
 
-<div class="bottomContent" style="margin-left: 100px;" id="bottomContent">
+<div class="bottomContent" style="margin-left: 100px; margin-top:60px;" id="bottomContent">
   <hr class="divisionLine">
   <div class="emailSubContent">
     <div class="leftBottom">
@@ -68,7 +84,7 @@ require_once('config.php');
           <div class="emailFormOther" id="emailFormOther">
           <div class="checkbox">
         <input type="checkbox" id="checkbox_1">
-        <label for="checkbox_1" id="agreementEmailSub">I have read, understood and agree to the  <a>Privacy Policy</a> and the  <br> <a>Terms of Use</a></label>
+        <label for="checkbox_1" id="agreementEmailSub">I have read, understood and agree to the  <a href="#">Privacy Policy</a> and the  <br> <a href="#">Terms of Use</a></label>
             </div>
         <div class="submitForm">
                <input type="submit" name="submitEmailSub" value="REGISTER" id="submitEmail"  disabled>
@@ -113,7 +129,7 @@ require_once('config.php');
           <td><a href="https://www.instagram.com/puray.ca/">Instagram</a></td>
           <td><span class="lang" key="languagePref">Language</span> &nbsp;&nbsp;
 <div class="languageSelector">
-  <a id="EN">EN</a> / <a id="FR">FR</a> / <a id="CN">CN</a>
+  <a  id="EN">EN</a> / <a id="FR">FR</a> / <a id="CN">CN</a>
 </div>
 </td>
         </tr>
@@ -128,17 +144,17 @@ require_once('config.php');
   </div>
 
   <div class="footerContent">
-    <h5 id="purayLogoFooter">PURAY</h5>
+    <h5 id="purayLogoFooter">PURAY/PRIVACY POLICY</h5>
     <li style="text-align: center; list-style: none; margin-top:-42px; margin-left:-80px;">
-  <a id="terms" href="#" class="lang" key="T&C">Terms & Conditions</a>
+  <a id="terms" href="termsAndconditions" class="lang" key="T&C">Terms & Conditions</a>
 </li>
   </div>
 
 </div>
 </div>
 <script type="text/javascript" src="static/js/jquery.js"></script>
-<script type="text/javascript" src="static/js/utility.js"></script>
 <script type="text/javascript" src="static/js/cookieHandler.js"></script>
 <script type="text/javascript" src="static/js/languageHandler.js"></script>
+<script type="text/javascript" src="static/js/loginFormUtility.js"></script>
 </body>
 </html>

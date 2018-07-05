@@ -544,6 +544,13 @@ display: inline-block;
   visibility: hidden;
 }
 
+.passwordRequirement{
+  font-size: 11px;
+  font-weight: lighter;
+  color: black;
+  visibility: visible;
+}
+
 .firstNameInput{
   font-size: 13px;
   font-weight: lighter;
@@ -732,4 +739,273 @@ width:500px;
   font-size:11px;
   line-height: 1.82;
   letter-spacing: 0.06rem;
+}
+
+
+
+#userNameReminder{
+  font-size: 11px;
+  font-weight: lighter;
+  color: red;
+  visibility: hidden;
+}
+
+#userNameInputBox{
+  height:17px;
+  border: 0;
+  width: calc(40% - 2px);
+  margin-left:1px;
+  box-shadow: -10px 14px 0px -8.9px grey;
+  -webkit-transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  font-size: 11px;
+  letter-spacing: 0.1rem;
+  font-family: "Quicksand", sans-serif;
+  margin-top: 15px;
+}
+
+#userNameInputBox:focus{
+  outline: none;
+}
+
+
+#userNameLabel{
+  margin-left: calc(-40% - 2px);
+}
+
+
+
+
+#passwordReminder{
+  font-size: 11px;
+  font-weight: lighter;
+  color: red;
+  visibility: hidden;
+}
+
+#passwordInputBox{
+  height:17px;
+  border: 0;
+  width: calc(40% - 2px);
+  margin-left:1px;
+  box-shadow: -10px 14px 0px -8.9px grey;
+  -webkit-transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  font-size: 11px;
+  letter-spacing: 0.1rem;
+  font-family: "Quicksand", sans-serif;
+  margin-top: 15px;
+}
+
+#passwordInputBox:focus{
+  outline: none;
+}
+
+
+#passwordLabel{
+  margin-left: calc(-40% - 2px);
+}
+
+
+.signin input{
+display: none;
+}
+
+#signInButton{
+  color: grey;
+}
+
+#signInButton:hover{
+  opacity: 0.5;
+}
+
+#invalidCredential{
+  font-size:14px;
+  color:red;
+  visibility: hidden;
+}
+
+
+
+#firstNameReminderRegister{
+  font-size: 11px;
+  font-weight: lighter;
+  color: red;
+  visibility: hidden;
+}
+
+#firstNameInputBoxRegister{
+  height:17px;
+  border: 0;
+  width: calc(40% - 2px);
+  margin-left:1px;
+  box-shadow: -10px 14px 0px -8.9px grey;
+  -webkit-transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  font-size: 11px;
+  letter-spacing: 0.1rem;
+  font-family: "Quicksand", sans-serif;
+  margin-top: 15px;
+}
+
+#firstNameInputBoxRegister:focus{
+  outline: none;
+}
+
+
+#firstNameLabelRegister{
+  margin-left: calc(-40% - 2px);
+}
+
+
+
+#lastNameReminderRegister{
+  font-size: 11px;
+  font-weight: lighter;
+  color: red;
+  visibility: hidden;
+}
+
+#lastNameInputBoxRegister{
+  height:17px;
+  border: 0;
+  width: calc(40% - 2px);
+  margin-left:1px;
+  box-shadow: -10px 14px 0px -8.9px grey;
+  -webkit-transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  font-size: 11px;
+  letter-spacing: 0.1rem;
+  font-family: "Quicksand", sans-serif;
+  margin-top: 15px;
+}
+
+#lastNameInputBoxRegister:focus{
+  outline: none;
+}
+
+
+#lastNameLabelRegister{
+  margin-left: calc(-40% - 2px);
+}
+
+
+
+#emailReminderRegister{
+  font-size: 11px;
+  font-weight: lighter;
+  color: red;
+  visibility: hidden;
+}
+
+#emailInputBoxRegister{
+  height:17px;
+  border: 0;
+  width: calc(40% - 2px);
+  margin-left:1px;
+  box-shadow: -10px 14px 0px -8.9px grey;
+  -webkit-transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  font-size: 11px;
+  letter-spacing: 0.1rem;
+  font-family: "Quicksand", sans-serif;
+  margin-top: 15px;
+}
+
+#emailInputBoxRegister:focus{
+  outline: none;
+}
+
+
+#emailLabelRegister{
+  margin-left: calc(-40% - 2px);
+}
+
+
+
+#passwordReminderRegister{
+  font-size: 11px;
+  font-weight: lighter;
+  color: red;
+  visibility: hidden;
+}
+
+#passwordInputBoxRegister{
+  height:17px;
+  border: 0;
+  width: calc(40% - 2px);
+  margin-left:1px;
+  box-shadow: -10px 14px 0px -8.9px grey;
+  -webkit-transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  font-size: 11px;
+  letter-spacing: 0.1rem;
+  font-family: "Quicksand", sans-serif;
+  margin-top: 15px;
+}
+
+#passwordInputBoxRegister:focus{
+  outline: none;
+}
+
+
+#passwordLabelRegister{
+  margin-left: calc(-40% - 2px);
+}
+
+
+#passwordReminderRegisterConfirm{
+  font-size: 11px;
+  font-weight: lighter;
+  color: red;
+  visibility: hidden;
+}
+
+#passwordInputBoxRegisterConfirm{
+  height:17px;
+  border: 0;
+  width: calc(40% - 2px);
+  margin-left:1px;
+  box-shadow: -10px 14px 0px -8.9px grey;
+  -webkit-transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  font-size: 11px;
+  letter-spacing: 0.1rem;
+  font-family: "Quicksand", sans-serif;
+  margin-top: 15px;
+}
+
+#passwordInputBoxRegisterConfirm:focus{
+  outline: none;
+}
+
+
+#passwordLabelRegisterConfirm{
+  margin-left: calc(-40% - 2px);
+}
+
+
+.register input{
+display: none;
+}
+
+#registerButton{
+  color: grey;
+}
+
+#registerButton:hover{
+  opacity: 0.5;
+}
+
+#duplicateAccount{
+  font-size:14px;
+  color:red;
+  visibility: hidden;
+}
+
+#emailConfirm{
+  visibility: hidden;
+}
+#emailConfirm h3{
+  font-size: 14px;
 }
