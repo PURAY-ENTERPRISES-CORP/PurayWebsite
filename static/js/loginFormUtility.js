@@ -308,6 +308,12 @@ $('#loginForm').submit(function(e){
       success: function(data){
         if(data.trim() == "invalid"){
             $('#invalidCredential').css("visibility","visible");
+            $('#invalidCredential').text("Invalid credentials. Please try again.");
+        }else if(data.trim() == "notConfirmed"){
+           $('#invalidCredential').css("visibility","visible");
+           $('#invalidCredential').text("Please confirm your email before log in");
+        }else{
+          alert("Welcome back! ".concat(data));
         }
       }
     });

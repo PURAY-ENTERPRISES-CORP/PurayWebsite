@@ -11,7 +11,7 @@
 </head>
 <body onload="loadCookieEnabled(); loadLanguage();" style="height:500px;">
 <?php
-//require_once('config.php');
+require_once('config.php');
  ?>
   <div id="bigBanner" >
     <div class="cookieBanner"  id="cookieBanner">
@@ -35,7 +35,7 @@
   </div>
     </div>
 
-
+<a href="#"></a>
 <div class="centerContent" style="margin-left:calc(50% - 150px); margin-top:-80px; position:relative; z-index:100;">
   <div class="registerForm">
     <h2 class="lang" key="registerTitle">Sign Up</h2>
@@ -160,7 +160,7 @@
   </div>
 
   <div class="footerContent">
-    <h5 id="purayLogoFooter">PURAY/PRIVACY POLICY</h5>
+    <h5 id="purayLogoFooter">PURAY/REGISTER</h5>
     <li style="text-align: center; list-style: none; margin-top:-42px; margin-left:-80px;">
   <a id="terms" href="termsAndconditions" class="lang" key="T&C">Terms & Conditions</a>
 </li>

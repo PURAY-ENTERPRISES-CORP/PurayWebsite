@@ -11,7 +11,7 @@
 </head>
 <body onload="loadCookieEnabled(); loadLanguage();" style="height:500px;">
 <?php
-require_once('config.php');
+//require_once('config.php');
  ?>
   <div id="bigBanner" >
     <div class="cookieBanner"  id="cookieBanner">
@@ -29,41 +29,57 @@ require_once('config.php');
 <div class="content">
     <div class="leftMenu" id="leftMenu" style="z-index:1; margin-top:30px;">
       <a href="\" style="margin-left: 10px;" class="lang" key="home">HOME</a>
-  <div class="knowledgeTitle" >
-  <a href="login" style="color:red;" class="lang" key="login">LOG IN</a>
-  <a href="register" class="lang" key="signup">SIGN UP</a>
+  <div class="accountTitle" >
+  <a href="account" class="lang" key="accountInfo">INFORMATION</a>
+  <a href="addressbook"  style="color:red;" class="lang" key="addressbook">ADDRESS BOOK</a>
   </div>
-
-
-
     </div>
 
-
+<a href="#"></a>
 <div class="centerContent" style="margin-left:calc(50% - 150px); margin-top:-80px; position:relative; z-index:100;">
-  <div class="login">
-    <h2 class="lang" key="loginTitle">Log In</h2>
+  <div class="registerForm">
+    <h2 class="lang" key="registerTitle">Sign Up</h2>
     <br>
-    <h3 id="invalidCredential">Invalid credentials. Please try again.</h3>
-    <form class="" action="loginFunction.php" method="post" id="loginForm">
-      <div class="usernameInput">
-        <input type="text" name="loginUserName" value="" placeholder="" id="userNameInputBox" class="fieldInput">
-        <label id="userNameLabel" class="userNameLabel fieldLabel lang" key="userNameLabel">EMAIL</label>
-        <h3 id="userNameReminder" class="reminder lang" key="emailLogIn">This Field is Required.</h3>
+    <h3 id="duplicateAccount">Account already exists. Please try again.</h3>
+    <form class="" action="registerFunction.php" method="post" id="registerForm">
+      <div class="firstnameInputRegister">
+        <input type="text" name="signupFirstName" value="" placeholder="" id="firstNameInputBoxRegister" class="fieldInput">
+        <label id="firstNameLabelRegister" class="firstNameLabelRegister fieldLabel lang" key="firstNameLabel">FIRSTNAME</label>
+        <h3 id="firstNameReminderRegister" class="reminder lang" key="reminder">This Field is Required.</h3>
       </div>
-      <div class="passwordInput">
-        <input type="password" name="loginPassword" value="" placeholder="" id="passwordInputBox" class="fieldInput">
-        <label id="passwordLabel" class="passwordLabel fieldLabel lang" key="passwordLabel">PASSWORD</label>
-        <h3 id="passwordReminder" class="reminder lang" key="reminder">This Field is Required.</h3>
+      <div class="lastnameInputRegister">
+        <input type="text" name="signupLastName" value="" placeholder="" id="lastNameInputBoxRegister" class="fieldInput">
+        <label id="lastNameLabelRegister" class="lastNameLabelRegister fieldLabel lang" key="lastNameLabel">LASTNAME</label>
+        <h3 id="lastNameReminderRegister" class="reminder lang" key="reminder">This Field is Required.</h3>
+      </div>
+      <div class="emailInputRegister">
+        <input type="text" name="signupEmail" value="" placeholder="" id="emailInputBoxRegister" class="fieldInput">
+        <label id="emailLabelRegister" class="emailLabelRegister fieldLabel lang" key="emailLabel">EMAIL</label>
+        <h3 id="emailReminderRegister" class="reminder lang" key="reminder">This Field is Required.</h3>
+      </div>
+      <div class="passwordRegister">
+        <input type="password" name="signupPassword" value="" placeholder="" id="passwordInputBoxRegister" class="fieldInput">
+        <label id="passwordLabelRegister" class="passwordLabelRegister fieldLabel lang" key="passwordLabel">PASSWORD</label>
+        <h3 class="passwordRequirement lang" key="passwordRequirement" id="passwordRequirement">Minimum password length: 8. <br>Password must at least contain an uppercase letter and a number or <br>non-alphanumeric letter.</h3>
+        <h3 id="passwordReminderRegister" class="reminder lang" key="reminder">This Field is Required.</h3>
+      </div>
+      <div class="passwordRegisterConfirm">
+        <input type="password" name="signupPasswordConfirm" value="" placeholder="" id="passwordInputBoxRegisterConfirm" class="fieldInput">
+        <label id="passwordLabelRegisterConfirm" class="passwordLabelRegisterConfirm fieldLabel lang" key="passwordLabel">PASSWORD CONFIRMATION</label>
+        <h3 id="passwordReminderConfirm" class="reminder lang" key="passwordMatch">Password doesn't match previous record.</h3>
       </div>
       <br>
-      <div class="signin">
-        <input type="submit" name="" value="SUBMIT"  id="submitSignin" disabled>
-        <label for="submitSignin" id="signInButton" class="lang" key="signin">SIGN IN</label>
-        <input type="submit" name="" value="SUBMIT"  id="submitSignin" disabled>
-        <a  style="margin-left: calc(40% - 140px);" id="signUpButton" href="register" >SIGN UP</a>
+      <div class="register">
+        <input type="submit" name="submitRegister" value="SUBMIT"  id="submitRegister" disabled>
+        <label for="submitRegister" id="registerButton" class="lang" key="register">REGISTER</label>
       </div>
 
     </form>
+    <div class="emailConfirm"  id="emailConfirm">
+      <h3>Thank you for your registration.</h3>
+      <h3>We have sent a confirmation email to your email address.</h3>
+      <h3>Please confirm your account.</h3>
+    </div>
 
   </div>
 
@@ -144,7 +160,7 @@ require_once('config.php');
   </div>
 
   <div class="footerContent">
-    <h5 id="purayLogoFooter">PURAY/LOG IN</h5>
+    <h5 id="purayLogoFooter">PURAY/ACCOUNT</h5>
     <li style="text-align: center; list-style: none; margin-top:-42px; margin-left:-80px;">
   <a id="terms" href="termsAndconditions" class="lang" key="T&C">Terms & Conditions</a>
 </li>
@@ -155,6 +171,6 @@ require_once('config.php');
 <script type="text/javascript" src="static/js/jquery.js"></script>
 <script type="text/javascript" src="static/js/cookieHandler.js"></script>
 <script type="text/javascript" src="static/js/languageHandler.js"></script>
-<script type="text/javascript" src="static/js/loginFormUtility.js"></script>
+<script type="text/javascript" src="static/js/registerFormUtility.js"></script>
 </body>
 </html>
