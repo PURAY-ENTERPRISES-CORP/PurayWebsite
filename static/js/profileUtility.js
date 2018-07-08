@@ -1,14 +1,26 @@
 if(initialTitle == ""){
   titleClickTime = 0;
+}else{
+  titleClickTime = 1;
+  $("#titleLabel").addClass("enquirylabelUp");
 }
 if(initialPhoneNumber == ""){
   phoneClickTime = 0;
+}else{
+  phoneClickTime = 1;
+  $("#phoneLabelDetails").addClass("enquirylabelUp");
 }
 if(initialDOB == ""){
   DOBClickTime = 0;
+}else{
+  DOBClickTime = 1;
+  $("#DOBLabelDetails").addClass("enquirylabelUp");
 }
 if(initialNationality == ""){
   nationalityClickTime = 0;
+}else{
+  nationalityClickTime = 1;
+  $("#nationalityLabelDetails").addClass("enquirylabelUp");
 }
 
 
