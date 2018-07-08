@@ -802,6 +802,17 @@ width:500px;
 }
 
 
+.accountTitle{
+  margin-left: 10px;
+  margin-top: 50px;
+}
+
+.accountTitle a{
+  display: block;
+  line-height: 30px;
+}
+
+
 #passwordLabel{
   margin-left: calc(-40% - 2px);
 }
@@ -1008,4 +1019,244 @@ display: none;
 }
 #emailConfirm h3{
   font-size: 14px;
+}
+
+
+.firstnameInputDetails{
+  font-size: 13px;
+  font-weight: lighter;
+  margin-left: 120px;
+  margin-top: -70px;
+}
+
+#firstNameInputBoxDetails{
+  height:17px;
+  border: 0;
+  width: calc(27% - 2px);
+  margin-left:1px;
+  box-shadow: -10px 14px 0px -8.9px grey;
+  -webkit-transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  font-size: 11px;
+  letter-spacing: 0.1rem;
+  font-family: "Quicksand", sans-serif;
+  margin-top: 15px;
+}
+#firstNameInputBoxDetails:focus{
+  outline: none;
+}
+
+#firstNameLabelDetails{
+  margin-left: calc(-27% - 2px);
+}
+
+
+#lastNameReminderDetails{
+  font-size: 11px;
+  font-weight: lighter;
+  color: red;
+  visibility: hidden;
+}
+
+#lastNameInputBoxDetails{
+  height:17px;
+  border: 0;
+  width: calc(40% - 2px);
+  margin-left:1px;
+  box-shadow: -10px 14px 0px -8.9px grey;
+  -webkit-transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  font-size: 11px;
+  letter-spacing: 0.1rem;
+  font-family: "Quicksand", sans-serif;
+  margin-top: 15px;
+}
+
+#lastNameInputBoxDetails:focus{
+  outline: none;
+}
+
+
+#lastNameLabelDetails{
+  margin-left: calc(-40% - 2px);
+}
+
+
+
+#emailReminderDetails{
+  font-size: 11px;
+  font-weight: lighter;
+  color: red;
+  visibility: hidden;
+}
+
+#emailInputBoxDetails{
+  height:17px;
+  border: 0;
+  width: calc(40% - 2px);
+  margin-left:1px;
+  box-shadow: -10px 14px 0px -8.9px grey;
+  -webkit-transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  font-size: 11px;
+  letter-spacing: 0.1rem;
+  font-family: "Quicksand", sans-serif;
+  margin-top: 15px;
+}
+
+#emailInputBoxDetails:focus{
+  outline: none;
+}
+
+
+#emailLabelDetails{
+  margin-left: calc(-40% - 2px);
+}
+
+
+
+
+#emailReminderDetails{
+  font-size: 11px;
+  font-weight: lighter;
+  color: red;
+  visibility: hidden;
+}
+
+#emailInputBoxDetails{
+  height:17px;
+  border: 0;
+  width: calc(40% - 2px);
+  margin-left:1px;
+  box-shadow: -10px 14px 0px -8.9px grey;
+  -webkit-transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  font-size: 11px;
+  letter-spacing: 0.1rem;
+  font-family: "Quicksand", sans-serif;
+  margin-top: 15px;
+}
+
+#emailInputBoxDetails:focus{
+  outline: none;
+}
+
+
+#emailLabelDetails{
+  margin-left: calc(-40% - 2px);
+}
+
+
+
+
+#phoneReminderDetails{
+  font-size: 11px;
+  font-weight: lighter;
+  color: red;
+  visibility: hidden;
+}
+
+#phoneInputBoxDetails{
+  height:17px;
+  border: 0;
+  width: calc(40% - 2px);
+  margin-left:1px;
+  box-shadow: -10px 14px 0px -8.9px grey;
+  -webkit-transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  font-size: 11px;
+  letter-spacing: 0.1rem;
+  font-family: "Quicksand", sans-serif;
+  margin-top: 15px;
+}
+
+#phoneInputBoxDetails:focus{
+  outline: none;
+}
+
+
+#phoneLabelDetails{
+  margin-left: calc(-40% - 2px);
+}
+
+
+
+
+#DOBReminderDetails{
+  font-size: 11px;
+  font-weight: lighter;
+  color: red;
+  visibility: hidden;
+}
+
+#DOBInputBoxDetails{
+  height:17px;
+  border: 0;
+  width: calc(40% - 2px);
+  margin-left:1px;
+  box-shadow: -10px 14px 0px -8.9px grey;
+  -webkit-transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  font-size: 11px;
+  letter-spacing: 0.1rem;
+  font-family: "Quicksand", sans-serif;
+  margin-top: 15px;
+}
+
+#DOBInputBoxDetails:focus{
+  outline: none;
+}
+
+
+#DOBLabelDetails{
+  margin-left: calc(-40% - 2px);
+}
+
+
+.save input{
+display: none;
+}
+
+#saveButton{
+  color: grey;
+}
+
+#saveButton:hover{
+  opacity: 0.5;
+}
+
+
+#titleDetails{
+  width: calc(14% - 2px);
+  border: 0px;
+  font-size: 13px;
+  background-color: rgba(0,0,0,0);
+  box-shadow: -10px 14px 0px -9px grey;
+  color:grey;
+  position: relative;
+  z-index: 12;
+}
+#titleDetails:focus{
+  outline: none;
+}
+
+#nationalityDetails{
+  width: calc(40% - 2px);
+  border: 0px;
+  font-size: 13px;
+  background-color: rgba(0,0,0,0);
+  box-shadow: -10px 14px 0px -9px grey;
+  color:grey;
+  position: relative;
+  z-index: 12;
+}
+#nationalityDetails:focus{
+  outline: none;
+}
+
+.nationalityLabelDetails{
+color:grey;
+font-size: 13px;
+margin-left: calc(-40% - 2px);
+display: inline-block;
 }

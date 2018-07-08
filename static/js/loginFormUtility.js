@@ -129,7 +129,6 @@ function activeSubmit(){
 
 
 
-
 window.onscroll = function() {myFunction()};
 
 
@@ -313,7 +312,7 @@ $('#loginForm').submit(function(e){
            $('#invalidCredential').css("visibility","visible");
            $('#invalidCredential').text("Please confirm your email before log in");
         }else{
-          alert("Welcome back! ".concat(data));
+          window.location.href = "accountInfo";
         }
       }
     });

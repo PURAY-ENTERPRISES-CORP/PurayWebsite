@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once('config.php');
 if(isset($_POST["loginUserName"])&&isset($_POST["loginPassword"])){
 $userName = $_POST["loginUserName"];
@@ -17,9 +18,7 @@ if (mysqli_num_rows($result) > 0) {
     echo "notConfirmed";
   }else{
     echo $fullName;
-    session_start();
     $_SESSION["ClientID"] = $ClientID;
-    $_SESSION["FirstName"] = $firstName;
   }
   }
 }else{
