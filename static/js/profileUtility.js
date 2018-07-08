@@ -16,6 +16,7 @@ if(initialDOB == ""){
   DOBClickTime = 1;
   $("#DOBLabelDetails").addClass("enquirylabelUp");
 }
+
 if(initialNationality == ""){
   nationalityClickTime = 0;
 }else{
