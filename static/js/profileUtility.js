@@ -26,7 +26,6 @@ if(initialNationality == ""){
 
 
 
-
 $('#firstNameInputBoxDetails').on('keyup',function(){
   var firstNameValue = this.value;
   var trimedLength = firstNameValue.trim().length ;
@@ -517,4 +516,321 @@ $('#detailsForm').submit(function(e){
         window.location.href = "accountInfo";
       }
     });
+    });
+
+
+    $('#newPasswordLink').click(function() {
+    $(window.opera ? 'html' : 'html, body').animate({
+        scrollTop: 0
+    }, 'slow');
+    //now hide details form
+    $("#detailsDiv").css("visibility","hidden");
+    $("#newPasswordInterface").css("visibility","visible");
+    $("#detailsDiv").css("z-index","10");
+    $("#newPasswordInterface").css("index","12");
+});
+
+
+//password modify
+currentPasswordReady = false;
+newPasswordReady = false;
+newPasswordConfirmed = false;
+currentPasswordClickTime = 0;
+newPasswordClickTime = 0;
+newPasswordConfirmClickTime = 0;
+
+function validatePassword(password){
+  var re = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
+  return re.test(password);
+}
+
+
+
+$("#currentPassword").on('focus', function () {
+  if(currentPasswordClickTime > 0 && currentPasswordClickTime%2 == 0){
+  $("#currentPasswordLabel").removeClass("enquirylabelUp");
+  $("#currentPasswordLabel").removeClass("enquirylabelDown");
+}
+  $("#currentPasswordLabel").addClass("enquirylabelUp");
+  currentPasswordClickTime += 1;
+});
+
+$('#currentPassword').on('keyup',function(){
+  var currenPassword = this.value;
+  var trimedLength = currenPassword.trim().length ;
+if(trimedLength == 0){
+  $("#currentPasswordLabel").css("color", "grey");
+  $("#currentPassword").css("box-shadow", "-10px 14px 0px -8.9px grey");
+  $("#currentPasswordReminder").css("visibility","hidden");
+  currentPasswordReady = false;
+}else if(!validatePassword(currenPassword)){
+  $("#currentPasswordLabel").css("color", "red");
+  $("#currentPassword").css("box-shadow", "-10px 14px 0px -8.9px red");
+  $("#currentPasswordReminder").css("visibility","visible");
+  $("#currentPasswordReminder").text("Invalid password.");
+  currentPasswordReady = false;
+}else {
+    $("#currentPasswordLabel").css("color", "grey");
+    $("#currentPassword").css("box-shadow", "-10px 14px 0px -8.9px grey");
+    $("#currentPasswordReminder").css("visibility","hidden");
+      currentPasswordReady = true;
+  }
+  var newPassword = document.getElementById("newPassword").value;
+  if(currenPassword.trim() == newPassword.trim()){
+    console.log("here we are");
+    $("#newPasswordLabel").css("color", "red");
+    $("#newPassword").css("box-shadow", "-10px 14px 0px -8.9px red");
+    $("#newPasswordReminder").css("visibility","visible");
+    $("#newPasswordReminder").text("New password cannot be the same as current password.");
+    newPasswordReady = false;
+  }else{
+    $("#newPasswordLabel").css("color", "grey");
+    $("#newPassword").css("box-shadow", "-10px 14px 0px -8.9px grey");
+    $("#newPasswordReminder").css("visibility","hidden");
+      newPasswordReady = true;
+  }
+  activatePasswordModify();
+});
+
+$('#currentPassword').on('focusout',function(){
+  var currenPassword = this.value;
+  var trimedLength = currenPassword.trim().length ;
+if(trimedLength == 0){
+  $("#currentPasswordLabel").css("color", "grey");
+  $("#currentPassword").css("box-shadow", "-10px 14px 0px -8.9px grey");
+  $("#currentPasswordReminder").css("visibility","hidden");
+  currentPasswordClickTime += 1;
+  $("#currentPasswordLabel").addClass("enquirylabelDown");
+  currentPasswordReady = false;
+}else if(!validatePassword(currenPassword)){
+  $("#currentPasswordLabel").css("color", "red");
+  $("#currentPassword").css("box-shadow", "-10px 14px 0px -8.9px red");
+  $("#currentPasswordReminder").css("visibility","visible");
+  $("#currentPasswordReminder").text("Invalid password.");
+  currentPasswordReady = false;
+}else {
+    $("#currentPasswordLabel").css("color", "grey");
+    $("#currentPassword").css("box-shadow", "-10px 14px 0px -8.9px grey");
+    $("#currentPasswordReminder").css("visibility","hidden");
+      currentPasswordReady = true;
+  }
+  var newPassword = document.getElementById("newPassword").value;
+  if(currenPassword.trim() == newPassword.trim()){
+    $("#newPasswordLabel").css("color", "red");
+    $("#newPassword").css("box-shadow", "-10px 14px 0px -8.9px red");
+    $("#newPasswordReminder").css("visibility","visible");
+    $("#newPasswordReminder").text("New password cannot be the same as current password.");
+    newPasswordReady = false;
+  }else{
+    $("#newPasswordLabel").css("color", "grey");
+    $("#newPassword").css("box-shadow", "-10px 14px 0px -8.9px grey");
+    $("#newPasswordReminder").css("visibility","hidden");
+      newPasswordReady = true;
+  }
+  activatePasswordModify();
+});
+
+
+
+$("#newPassword").on('focus', function () {
+  if(newPasswordClickTime > 0 && newPasswordClickTime%2 == 0){
+  $("#newPasswordLabel").removeClass("enquirylabelUp");
+  $("#newPasswordLabel").removeClass("enquirylabelDown");
+}
+  $("#newPasswordLabel").addClass("enquirylabelUp");
+  newPasswordClickTime += 1;
+});
+
+$('#newPassword').on('keyup',function(){
+  var newPassword = this.value;
+  var trimedLength = newPassword.trim().length ;
+if(trimedLength == 0){
+  $("#newPasswordLabel").css("color", "grey");
+  $("#newPassword").css("box-shadow", "-10px 14px 0px -8.9px grey");
+  $("#newPasswordReminder").css("visibility","hidden");
+  newPasswordReady = false;
+}else if(!validatePassword(newPassword)){
+  $("#newPasswordLabel").css("color", "red");
+  $("#newPassword").css("box-shadow", "-10px 14px 0px -8.9px red");
+  $("#newPasswordReminder").css("visibility","visible");
+  $("#newPasswordReminder").text("Invalid password.");
+  newPasswordReady = false;
+}else {
+    $("#newPasswordLabel").css("color", "grey");
+    $("#newPassword").css("box-shadow", "-10px 14px 0px -8.9px grey");
+    $("#newPasswordReminder").css("visibility","hidden");
+    newPasswordReady = true;
+  }
+  var passwordConfirmValue = document.getElementById("newPasswordConfirm").value;
+
+  if(newPassword != passwordConfirmValue && passwordConfirmValue.trim().length != 0){
+    $("#newPasswordConfirmLabel").css("color", "red");
+    $("#newPasswordConfirm").css("box-shadow", " -10px 14px 0px -8.9px red")
+    $("#newPasswordConfirmReminder").css("visibility","visible");
+    $("#newPasswordConfirmReminder").text("Password doesn't match previous record.");
+      newPasswordConfirmed = false;
+  }else{
+    $("#newPasswordConfirmLabel").css("color", "grey");
+    $("#newPasswordConfirm").css("box-shadow", "-10px 14px 0px -8.9px grey");
+    $("#newPasswordConfirmReminder").css("visibility","hidden");
+    newPasswordConfirmed = true;
+  }
+  activatePasswordModify();
+});
+
+$('#newPassword').on('focusout',function(){
+  var newPassword = this.value;
+  var trimedLength = newPassword.trim().length ;
+if(trimedLength == 0){
+  $("#newPasswordLabel").css("color", "grey");
+  $("#newPassword").css("box-shadow", "-10px 14px 0px -8.9px grey");
+  $("#newPasswordReminder").css("visibility","hidden");
+  newPasswordClickTime += 1;
+  $("#newPasswordLabel").addClass("enquirylabelDown");
+  newPasswordReady = false;
+}else if(!validatePassword(newPassword)){
+  $("#newPasswordLabel").css("color", "red");
+  $("#newPassword").css("box-shadow", "-10px 14px 0px -8.9px red");
+  $("#newPasswordReminder").css("visibility","visible");
+  $("#newPasswordReminder").text("Invalid password.");
+  newPasswordReady = false;
+}else {
+    $("#newPasswordLabel").css("color", "grey");
+    $("#newPassword").css("box-shadow", "-10px 14px 0px -8.9px grey");
+    $("#newPasswordReminder").css("visibility","hidden");
+    newPasswordReady = true;
+  }
+  var currenPassword = document.getElementById("currentPassword").value;
+  console.log("currentPassword is ", currenPassword);
+  if(currenPassword.trim() == newPassword.trim()){
+    console.log("here we are");
+    $("#newPasswordLabel").css("color", "red");
+    $("#newPassword").css("box-shadow", "-10px 14px 0px -8.9px red");
+    $("#newPasswordReminder").css("visibility","visible");
+    $("#newPasswordReminder").text("New password cannot be the same as current password.");
+    newPasswordReady = false;
+  }else{
+    $("#newPasswordLabel").css("color", "grey");
+    $("#newPassword").css("box-shadow", "-10px 14px 0px -8.9px grey");
+    $("#newPasswordReminder").css("visibility","hidden");
+      newPasswordReady = true;
+  }
+  activatePasswordModify();
+});
+
+
+
+
+$("#newPasswordConfirm").on('focus', function () {
+  if(newPasswordConfirmClickTime > 0 && newPasswordConfirmClickTime%2 == 0){
+  $("#newPasswordConfirmLabel").removeClass("enquirylabelUp");
+  }
+  $("#newPasswordConfirmLabel").addClass("enquirylabelUp");
+  newPasswordConfirmClickTime += 1;
+});
+
+$('#newPasswordConfirm').on('keyup',function(){
+  var passwordConfirmValue = this.value;
+  console.log("confirm value:", passwordConfirmValue);
+  var previousPassword = document.getElementById("newPassword").value;
+  var trimedLength = previousPassword.trim().length ;
+  console.log("old value:", previousPassword);
+  if(trimedLength == 0 || previousPassword == null){
+    $("#newPasswordConfirmLabel").css("color", "red");
+    $("#newPasswordConfirm").css("box-shadow", " -10px 14px 0px -8.9px red")
+    $("#newPasswordConfirmReminder").css("visibility","visible");
+    $("#newPasswordConfirmReminder").text("Previous password can't be empty");
+      newPasswordConfirmed = false;
+  } else if(passwordConfirmValue!=previousPassword){
+    $("#newPasswordConfirmLabel").css("color", "red");
+    $("#newPasswordConfirm").css("box-shadow", " -10px 14px 0px -8.9px red")
+    $("#newPasswordConfirmReminder").css("visibility","visible");
+    $("#newPasswordConfirmReminder").text("Password doesn't match previous record.");
+      newPasswordConfirmed = false;
+  }else{
+    $("#newPasswordConfirmLabel").css("color", "grey");
+    $("#newPasswordConfirm").css("box-shadow", "-10px 14px 0px -8.9px grey");
+    $("#newPasswordConfirmReminder").css("visibility","hidden");
+    newPasswordConfirmed = true;
+  }
+  activatePasswordModify();
+});
+
+$('#newPasswordConfirm').on('focusout',function(){
+  var passwordConfirmValue = this.value;
+  console.log("confirm value:", passwordConfirmValue);
+  var previousPassword = document.getElementById("newPassword").value;
+  var trimedLength = previousPassword.trim().length ;
+  console.log("old value:", previousPassword);
+  if(trimedLength == 0 || previousPassword == null){
+    $("#newPasswordConfirmLabel").css("color", "red");
+    $("#newPasswordConfirm").css("box-shadow", " -10px 14px 0px -8.9px red")
+    $("#newPasswordConfirmReminder").css("visibility","visible");
+    $("#newPasswordConfirmReminder").text("Previous password can't be empty");
+      newPasswordConfirmed = false;
+  } else if(passwordConfirmValue!=previousPassword){
+    $("#newPasswordConfirmLabel").css("color", "red");
+    $("#newPasswordConfirm").css("box-shadow", " -10px 14px 0px -8.9px red")
+    $("#newPasswordConfirmReminder").css("visibility","visible");
+    $("#newPasswordConfirmReminder").text("Password doesn't match previous record.");
+      newPasswordConfirmed = false;
+  }else{
+    $("#newPasswordConfirmLabel").css("color", "grey");
+    $("#newPasswordConfirm").css("box-shadow", "-10px 14px 0px -8.9px grey");
+    $("#newPasswordConfirmReminder").css("visibility","hidden");
+    newPasswordConfirmed = true;
+  }
+  activatePasswordModify();
+});
+
+
+function activatePasswordModify(){
+  if(currentPasswordReady && newPasswordReady && newPasswordConfirmed){
+    $('#saveButtonPassword').css('color','red');
+    $("#saveNewPassword").prop('disabled', false);
+  }else{
+    $('#saveButtonPassword').css('color','grey');
+    $("#saveNewPassword").prop('disabled', true);
+  }
+}
+
+
+$('#passwordForm').submit(function(e){
+    e.preventDefault(); // stops the form submission
+    var formContent = $(this).serialize();
+    console.log(formContent);
+    $.ajax({
+      url: "profileModifyFunction.php", // action attribute of form to send the values
+      type: 'POST', // method used in the form
+      data: formContent,
+      dataType: "text",
+      success: function(data){
+        if(data == "duplicate"){
+          $("#newPasswordLabel").css("color", "red");
+          $("#newPassword").css("box-shadow", "-10px 14px 0px -8.9px red");
+          $("#newPasswordReminder").css("visibility","visible");
+          $("#newPasswordReminder").text("Invalid password.");
+          newPasswordReady = false;
+        }else if(data == "error"){
+          $("#currentPasswordLabel").css("color", "red");
+          $("#currentPassword").css("box-shadow", "-10px 14px 0px -8.9px red");
+          $("#currentPasswordReminder").css("visibility","visible");
+          $("#currentPasswordReminder").text("Incorrect current password.");
+          currentPasswordReady = false;
+        }else{
+          $("#successModify").css("visibility","visible");
+          window.setTimeout(function(){
+       // Move to a new location or you can do something else
+       window.location.href = "accountInfo";
+   }, 2000);
+        }
+      }
+    });
+    });
+
+    $('#hidePasswordInterface').on('click',function(){
+      $("#detailsDiv").css("visibility","visible");
+      $("#newPasswordInterface").css("visibility","hidden");
+      $("#detailsDiv").css("z-index","12");
+      $("#newPasswordInterface").css("index","10");
     });

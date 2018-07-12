@@ -14,7 +14,7 @@ if(mysqli_num_rows($checkKey) != 0){
   $delete_rowQuery = "DELETE FROM Email_Confirm WHERE `ClientID` = '$confirm_info[ClientID]' LIMIT 1";
   $delete_row = mysqli_query($conn, $delete_rowQuery);
   if($update_users){
-    echo "Success: You have successfully confirmed your email address";
+    header('Location: accountInfo.php');
   }else{
     echo "Failed";
   }

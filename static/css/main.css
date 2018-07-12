@@ -66,6 +66,13 @@ font-size: 45px;
 font-weight: lighter;
 }
 
+.utilityHeader a{
+  font-size:13px;
+  font-family: "Quicksand", sans-serif;
+  color:black;
+  letter-spacing: 0.05rem;
+}
+
 .content {
   padding: 10px;
 }
@@ -548,7 +555,6 @@ display: inline-block;
   font-size: 11px;
   font-weight: lighter;
   color: black;
-  visibility: visible;
 }
 
 .firstNameInput{
@@ -831,6 +837,12 @@ display: none;
 }
 
 #invalidCredential{
+  font-size:14px;
+  color:red;
+  visibility: hidden;
+}
+
+#successModify{
   font-size:14px;
   color:red;
   visibility: hidden;
@@ -1259,4 +1271,131 @@ color:grey;
 font-size: 13px;
 margin-left: calc(-40% - 2px);
 display: inline-block;
+}
+
+.resetPassword a{
+  font-size:13px;
+  color:grey;
+  text-decoration: underline;
+}
+
+
+
+#currentPasswordReminder{
+  font-size: 11px;
+  font-weight: lighter;
+  color: red;
+  visibility: hidden;
+}
+
+#currentPassword{
+  height:17px;
+  border: 0;
+  width: calc(40% - 2px);
+  margin-left:1px;
+  box-shadow: -10px 14px 0px -8.9px grey;
+  -webkit-transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  font-size: 11px;
+  letter-spacing: 0.1rem;
+  font-family: "Quicksand", sans-serif;
+  margin-top: 15px;
+}
+
+#currentPassword:focus{
+  outline: none;
+}
+
+
+#currentPasswordLabel{
+  margin-left: calc(-40% - 2px);
+}
+
+
+
+#newPasswordReminder{
+  font-size: 11px;
+  font-weight: lighter;
+  color: red;
+  visibility: hidden;
+}
+
+#newPassword{
+  height:17px;
+  border: 0;
+  width: calc(40% - 2px);
+  margin-left:1px;
+  box-shadow: -10px 14px 0px -8.9px grey;
+  -webkit-transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  font-size: 11px;
+  letter-spacing: 0.1rem;
+  font-family: "Quicksand", sans-serif;
+  margin-top: 15px;
+}
+
+#newPassword:focus{
+  outline: none;
+}
+
+
+#newPasswordLabel{
+  margin-left: calc(-40% - 2px);
+}
+
+
+
+#newPasswordConfirmReminder{
+  font-size: 11px;
+  font-weight: lighter;
+  color: red;
+  visibility: hidden;
+}
+
+#newPasswordConfirm{
+  height:17px;
+  border: 0;
+  width: calc(40% - 2px);
+  margin-left:1px;
+  box-shadow: -10px 14px 0px -8.9px grey;
+  -webkit-transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  font-size: 11px;
+  letter-spacing: 0.1rem;
+  font-family: "Quicksand", sans-serif;
+  margin-top: 15px;
+}
+
+#newPasswordConfirm:focus{
+  outline: none;
+}
+
+
+#newPasswordConfirmLabel{
+  margin-left: calc(-40% - 2px);
+}
+
+
+.newPasswordSave input{
+display: none;
+}
+
+#saveButtonPassword{
+  color: grey;
+}
+
+#saveButtonPassword:hover{
+  opacity: 0.5;
+}
+
+#newPasswordInterface{
+  visibility: hidden;
+  margin-top:-650px;
+  margin-bottom:300px;
+}
+
+
+#hidePasswordInterface{
+  color:grey;
+  margin-left: calc(40% - 120px);
 }

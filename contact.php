@@ -13,6 +13,7 @@
   <body onload="loadCookieEnabled();loadLanguage();">
     <?php
     require_once('config.php');
+    require_once('sessionCheck.php');
      ?>
     <div id="bigBanner" >
       <div class="cookieBanner"  id="cookieBanner">
@@ -23,6 +24,9 @@
       <div class="header" id="myHeader" style="z-index: -1;">
         <h3 class="lang" key="siteInPrepare">Site in preparation. We apologize for any inconvinience.</h3>
         <a href="/">PURAY</a>
+        <div class="utilityHeader">
+          <a href="accountInfo" id="accountBtn" style="margin-left:1000px;">LOG IN</a>
+          <a href="#" id="shoppingCart" style="margin-left:50px; text-decoration:underline;">0</a>
       </div>
     </div>
 
@@ -229,6 +233,9 @@
     <script type="text/javascript" src="static/js/cookieHandler.js"></script>
     <script type="text/javascript" src="static/js/contactFormUtility.js"></script>
     <script type="text/javascript" src="static/js/textarea-autogrow.js"></script>
+    <script type="text/javascript">
+    document.getElementById("accountBtn").innerText = "<?php echo  $validSession ?>";
+    </script>
     <script type="text/javascript" src="static/js/languageHandler.js"></script>
   </body>
 </html>

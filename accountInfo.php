@@ -1,6 +1,9 @@
 <?php
 session_start();
 require_once('config.php');
+if($_SESSION['ClientID'] == ""){
+header('Location: login.php');
+}
 $getInfoQuery = "SELECT * FROM CLIENT_ACCOUNT WHERE ClientID = {$_SESSION['ClientID']}; ";
 $clientInfo = mysqli_query( $conn, $getInfoQuery );
 if (mysqli_num_rows($clientInfo) > 0) {
@@ -47,12 +50,13 @@ if (mysqli_num_rows($clientInfo) > 0) {
   <div class="accountTitle" >
   <a href="accountInfo" class="lang" key="accountInfo" style="color:red;" >INFORMATION</a>
   <a href="addressbook"  class="lang" key="addressbook">ADDRESS BOOK</a>
+  <a href="logout" class="lang" key="logout">LOG OUT</a>
   </div>
     </div>
 
 <a href="#"></a>
 <div class="centerContent" style="margin-left:calc(50% - 150px); margin-top:-80px; position:relative; z-index:100;">
-  <div class="registerForm">
+  <div class="registerForm" id="detailsDiv">
     <h2 class="lang" key="registerTitle">DETAILS</h2>
     <br>
     <form class="" action="detailsFunction.php" method="post" id="detailsForm">
@@ -299,21 +303,48 @@ if (mysqli_num_rows($clientInfo) > 0) {
       </div>
       <br>
       <br>
+      <div class="resetPassword">
+        <a id="newPasswordLink">NEW PASSWORD</a>
+      </div>
+      <br>
+      <br>
       <div class="save">
         <input type="submit" name="saveDetails" value="SUBMIT"  id="saveDetails" disabled>
         <label for="saveDetails" id="saveButton" class="lang" key="save">SAVE</label>
-        <a href="login" class="lang" key="logout" style="margin-left: calc(40% - 140px);" >LOG OUT</a>
       </div>
 
     </form>
-    <div class="emailConfirm"  id="emailConfirm">
-      <h3>Thank you for your registration.</h3>
-      <h3>We have sent a confirmation email to your email address.</h3>
-      <h3>Please confirm your account.</h3>
-    </div>
 
   </div>
 
+<div class="newPassword" id="newPasswordInterface">
+  <h2 class="lang" key="modifyPassword">MODIFY PASSWORD</h2>
+  <h3 id="successModify">Updated successfully. Redirecting...</h3>
+  <form class="" action="index.html" method="post" id="passwordForm">
+    <div class="currentPassword">
+      <input type="password" name="currentPassword" value="" placeholder="" id="currentPassword" class="fieldInput">
+      <label id="currentPasswordLabel" class="currentPasswordLabel fieldLabel lang" key="currentPasswordLabel">CURRENT PASSWORD</label>
+      <h3 id="currentPasswordReminder" class="reminder lang" key="currentPasswordReminder">Current password is wrong.</h3>
+    </div>
+    <div class="newPassword">
+      <input type="password" name="newPassword" value="" placeholder="" id="newPassword" class="fieldInput">
+      <label id="newPasswordLabel" class="newPasswordLabel fieldLabel lang" key="newPasswordLabel">NEW PASSWORD</label>
+      <h3 class="passwordRequirement lang" key="passwordRequirement" id="passwordRequirement">Minimum password length: 8. <br>Password must at least contain an uppercase letter and a number or <br>non-alphanumeric letter.</h3>
+      <h3 id="newPasswordReminder" class="reminder lang" key="passwordReminder">This Field is Required.</h3>
+    </div>
+    <div class="newPasswordConfirm">
+      <input type="password" name="newPasswordConfirm" value="" placeholder="" id="newPasswordConfirm" class="fieldInput">
+      <label id="newPasswordConfirmLabel" class="newPasswordConfirmLabel fieldLabel lang" key="newPasswordConfirmLabel">VERIFY PASSWORD</label>
+      <h3 id="newPasswordConfirmReminder" class="reminder lang" key="passwordReminder">This Field is Required.</h3>
+    </div>
+    <div class="newPasswordSave">
+      <input type="submit" name="saveNewPassword" value="SUBMIT"  id="saveNewPassword" disabled>
+      <label for="saveNewPassword" id="saveButtonPassword" class="lang" key="save">SAVE</label>
+      <a id="hidePasswordInterface">CANCEL</a>
+    </div>
+  </form>
+
+</div>
 </div>
 
 

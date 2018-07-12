@@ -30,6 +30,27 @@ $updateQuery = "UPDATE CLIENT_ACCOUNT SET Title = '$newTitle',  ".
 $result = mysqli_query($conn, $updateQuery);
 echo $updateQuery;
 }
+if(isset($_POST["newPassword"])){
+$currentPassword = $_POST["currentPassword"];
+$newPassword = $_POST["newPassword"];
+$checkExistingQuery = "SELECT Password FROM CLIENT_ACCOUNT WHERE ClientID = {$_SESSION['ClientID']} AND Password = '$currentPassword' ";
+$allEntries = mysqli_query($conn, $checkExistingQuery);
+if (mysqli_num_rows($allEntries) > 0) {
+  //should be only one result
+  while($row = mysqli_fetch_assoc($allEntries)) {
+    $oldPassword= $row['Password'];
+    if($oldPassword == $newPassword){
+    echo "duplicate";
+  }else{
+    $updatePasswordQuery = "UPDATE CLIENT_ACCOUNT SET Password = '$newPassword' WHERE  ClientID = {$_SESSION['ClientID']}";
+    $updateResult= mysqli_query($conn, $updatePasswordQuery);
+    echo "success";
+  }
+  }
+}else{
+  echo "error";
+}
+}
 
 
  ?>
