@@ -11,8 +11,8 @@
 </head>
 <body onload="loadCookieEnabled(); loadLanguage();">
 <?php
-//require_once('config.php');
-//require_once('sessionCheck.php');
+require_once('config.php');
+require_once('sessionCheck.php');
  ?>
   <div id="bigBanner" >
     <div class="cookieBanner"  id="cookieBanner">
@@ -36,13 +36,13 @@
     <div class="leftMenu" id="leftMenu" style="z-index:1; margin-top:30px;">
   <input type="text" name="" value="" placeholder="SEARCH" id="search">
   <div class="productList menuTitle" >
-    <h3 class="lang" key="product">PRODUCT</h3>
-  <a href="purayModel" style="margin-left: 30px;  color:red;">PURAY I</a>
+    <h3 class="lang" key="product">SHOP</h3>
+  <a href="product" style="margin-left: 30px;  color:red;">PURAY I</a>
   </div>
   <div class="introduction menuTitle">
     <h3 class="lang" key="idea"> IDEA BEHIND</h3>
-    <a href="hydroWater.php" class="lang" key="naturalBeauty">HYDROGEN WATER"</a>
-    <a href="#" class="lang" key="smartHealth">INTELLIGENT MOISTURIZER</a>
+    <a href="purayIIdea1" class="lang" key="naturalBeauty">HYDROGEN WATER"</a>
+    <a href="purayIIdea2" class="lang" key="smartHealth">INTELLIGENT MOISTURIZER</a>
   </div>
   <div class="brandInfo">
   <a href="brand" style="margin-left:0px;" class="lang" key="brandInfo">THE BRAND</a>
@@ -77,7 +77,9 @@
   <button class="button colorModel outofstockModel"  id="goldModel">GOLD</button>
   <p id="outOfStockReminder" >Sorry. We are currently out of stock.  <br> <br>If we are back in stock, we would like to notify you.  <br>Please subscribe to <a href="#emailSub" style="color:grey;text-decoration:underline;">newsletter</a>. </p>
   </div>
-  <div id='product-component-53d90f8cb42'></div>
+  <div id='product-component-53d90f8cb42' style="margin-top:-80px;"></div>
+  <br>
+  <br>
 <script type="text/javascript">
 /*<![CDATA[*/
 
@@ -378,7 +380,7 @@
 <script type="text/javascript" src="static/js/utility.js"></script>
 <script type="text/javascript" src="static/js/cookieHandler.js"></script>
 <script type="text/javascript">
-//document.getElementById("accountBtn").innerText = "<?php echo  $validSession ?>";
+document.getElementById("accountBtn").innerText = "<?php echo  $validSession ?>";
 </script>
 <script type="text/javascript" src="static/js/languageHandler.js"></script>
 <script src='static/js/jquery.elevatezoom.js'></script>

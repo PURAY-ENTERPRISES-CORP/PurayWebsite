@@ -7,10 +7,10 @@ $("#silverModel").on("click",function(){
   if(!silverInStock){
     //change gold images
     $("#outOfStockReminder").css("visibility","visible");
-    $("#product-component-291ed547ed3").css("margin-top","0px");
+    $("#product-component-53d90f8cb42").css("margin-top","0px");
   }else{
     $("#outOfStockReminder").css("visibility","hidden");
-    $("#product-component-291ed547ed3").css("margin-top","-80px");
+    $("#product-component-53d90f8cb42").css("margin-top","-80px");
   }
 })
 
@@ -21,10 +21,10 @@ $("#goldModel").on("click",function(){
   if(!goldInStock){
     //change gold images
     $("#outOfStockReminder").css("visibility","visible");
-    $("#product-component-291ed547ed3").css("margin-top","0px");
+    $("#product-component-53d90f8cb42").css("margin-top","0px");
   }else{
     $("#outOfStockReminder").css("visibility","hidden");
-    $("#product-component-291ed547ed3").css("margin-top","-80px");
+    $("#product-component-53d90f8cb42").css("margin-top","-80px");
   }
 })
 

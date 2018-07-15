@@ -11,8 +11,8 @@
 </head>
 <body onload="loadCookieEnabled(); loadLanguage();">
 <?php
-//require_once('config.php');
-//require_once('sessionCheck.php');
+require_once('config.php');
+require_once('sessionCheck.php');
  ?>
   <div id="bigBanner" >
     <div class="cookieBanner"  id="cookieBanner">
@@ -36,13 +36,13 @@
     <div class="leftMenu" id="leftMenu" style="z-index:1; margin-top:30px;">
   <input type="text" name="" value="" placeholder="SEARCH" id="search">
   <div class="productList menuTitle" >
-    <h3 class="lang" key="product">PRODUCT</h3>
-  <a href="product.php" style="margin-left: 30px;">PURAY I</a>
+    <h3 class="lang" key="product">SHOP</h3>
+  <a href="product" style="margin-left: 30px;">PURAY I</a>
   </div>
   <div class="introduction menuTitle">
     <h3 class="lang" key="idea"> IDEA BEHIND</h3>
-    <a href="#" class="lang" key="naturalBeauty" style="color:red;">HYDROGEN WATER"</a>
-    <a href="#" class="lang" key="smartHealth">INTELLIGENT MOISTURIZER</a>
+    <a href="purayIIdea1" class="lang" key="naturalBeauty">HYDROGEN WATER"</a>
+    <a href="purayIIdea2" class="lang" key="smartHealth" style="color:red">INTELLIGENT MOISTURIZER</a>
   </div>
   <div class="brandInfo">
   <a href="brand" style="margin-left:0px;" class="lang" key="brandInfo">THE BRAND</a>
@@ -54,25 +54,23 @@
 
 
 <div class="centerContent" >
-  <div class="hydrogenIntro">
-    <h3>／HOW TO MAKE ／</h3>
-    <p>Two delicate designed, rust and bacteria-resistant electrolytic bars (FDA approved) resolve the water you add. They instantly create fully hydrogen-enriched water once you start to use.</p>
+  <div class="moisturizerInfo">
+    <h3>／AWARD-WINNING／</h3>
     <br>
-    <h3>／WHY IS IT GOOD／</h3>
-    <p>Hydrogen is the smallest and lightest element in the periodic table, and yet it generates the most powerful and natural way to help to get better skin.
-    <br> Without chemicals or artificial ingredients in common cosmetic or skin-care products, hydrogen reaches to your deepest skin and activates your skin to repair by itself.</p>
+    <h3>／MOISTURE TRACK／</h3>
+    <p>Download “Pure Spray” app to your phone - Connect Pure Spray with your phone through Bluetooth <br>
+    Put hygiene-safe sensors on your skin and hold for five seconds <br>
+    Understand your skin moisturizing condition with accurate numbers <br>
+    Your personal data will be safely stored in the app. You will be able to track your skin condition’s improvement
+    </p>
     <br>
-    <h3>／PROOF - RESULTS／</h3>
-    <p>In a human study, bathing three months in hydrogen water significantly improved in neck wrinkles.
-    <br>The hydrogen water also reduced human skin cell damage from the UltraViolet (UV) rays. </p>
-    <h3><a href="https://www.ncbi.nlm.nih.gov/pubmed/22070900" style="text-decoration:underline;">[ More Information ]</a></h3>
+    <h3>／TEST YOUR PRODUCTS／</h3>
+    <p>Giving a first try to new products that you just bought and not sure about if they improve your skin’s dryness? <br>
+    Use Pure Spray intelligent sensors to test how your skin is moisturized after each use of the new products. <br>
+    Keep tracking on app will help you to see if your new skincare/cosmetic products are your perfect fit.
+</p>
     <br>
-    <h3><hr style="width:120px;"> </h3>
-    <br>
-    <p id="elleSay"> <a href="https://www.elle.com/beauty/health-fitness/a43599/liquid-assets/">“ HYDROGEN (H) SIGNIFICANTLY REDUCES FREE RADICALS—INFLAMMATION-CAUSING MOLECULES LINKED TO EVERYTHING FROM ACCELERATED SKIN AGING TO CANCER.”
-</a> </p>
-    <h3 style="float:right">--&nbsp; <img src="static/image/ELLE.png" alt="" style="width:50px;"></h3>
-    <br>
+    <h3>／SWAROSKI CRYSTAL EMBEDDED／</h3>
   </div>
 </div>
 
@@ -80,7 +78,7 @@
 <div class="rightContent" style="position:relative; z-index:10; margin-top:-500px;">
 </div>
 
-<div class="bottomContent" style="margin-left: 100px; margin-top:150px;" id="bottomContent">
+<div class="bottomContent" style="margin-left: 100px; margin-top:80px;" id="bottomContent">
   <hr class="divisionLine">
   <div class="emailSubContent">
     <div class="leftBottom">
@@ -165,7 +163,7 @@
 <script type="text/javascript" src="static/js/utility.js"></script>
 <script type="text/javascript" src="static/js/cookieHandler.js"></script>
 <script type="text/javascript">
-//document.getElementById("accountBtn").innerText = "<?php echo  $validSession ?>";
+document.getElementById("accountBtn").innerText = "<?php echo  $validSession ?>";
 </script>
 <script type="text/javascript" src="static/js/languageHandler.js"></script>
 <script src='static/js/jquery.elevatezoom.js'></script>

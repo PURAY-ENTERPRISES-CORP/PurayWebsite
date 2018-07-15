@@ -1,3 +1,63 @@
+.content{
+  width:100%;
+  height:100%;
+}
+
+.blink_me {
+  animation: blinker 3s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.section01{
+  width:100%;
+  height: 100%;
+  margin-bottom:1000px;
+}
+.section02{
+  width:100%;
+  height: 50%:
+}
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 2;
+  top: 100px;
+  overflow-x: hidden;
+  padding-top: 10px;
+  margin-bottom: 200px;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  background-color: white;
+}
+
+/* Control the right side */
+.right {
+  z-index:-1;
+  right: 0;
+  background-color: white;
+  margin-top:-100px;
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
 @font-face {
     font-family: purayFont;
     src: url("static/fonts/PURAY_FONT.woff") format('woff');
@@ -5,7 +65,7 @@
 
 body {
   margin: 0;
-  font-family: Arial;
+  font-family: "Quicksand", sans-serif;
   background: white;
   height: 1000px;
 }
@@ -75,6 +135,7 @@ font-weight: lighter;
 
 .content {
   padding: 10px;
+  z-index:-2;
 }
 
 .sticky {
@@ -225,7 +286,7 @@ a:hover{
 
 .leftMenu{
   float:left;
-  margin-left:3%;
+  margin-left:100px;
   font-family: "Quicksand", sans-serif;
   letter-spacing: 0.1rem;
   font-size: 12px;
@@ -1499,4 +1560,9 @@ button:focus {outline:0;}
 .moisturizerInfo p{
   font-size:12px;
   line-height:20px;
+}
+
+
+#shopButton{
+  font-size:15px;
 }

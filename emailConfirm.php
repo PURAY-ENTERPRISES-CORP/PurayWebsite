@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once('config.php');
+require_once('authencateApiShopify.php');
 if(isset($_GET['key'])&&isset($_GET['email'])){
 $key = $_GET['key'];
 $email = $_GET['email'];
@@ -30,12 +31,6 @@ if(mysqli_num_rows($checkKey) != 0){
     header('Location: accountInfo.php');
     //now post to shopify
     //get user info first
-    //Modify these
-    $API_KEY = 'babcf268aa565282c961e1dd12167556';
-    $SECRET = 'e99534dbfa6430a0f0a2e4e632952afe';
-    $TOKEN = 'fb679dbb4b8b82e745fee60828f13346';
-    $STORE_URL = 'puray.myshopify.com';
-
     //try to add one client
     $customer_array = array(
                     'customer' => array(
@@ -58,8 +53,11 @@ if(mysqli_num_rows($checkKey) != 0){
     curl_setopt($ch,CURLOPT_CONNECTTIMEOUT ,3);
     curl_setopt($ch,CURLOPT_TIMEOUT, 20);
     $response = curl_exec($ch);
+    $decodedJson = json_decode($response,true);
+    $shopifyCustomerID = $decodedJson["customer"]["id"];
     curl_close ($ch);
-
+    $updateShopifyCustomerID = "UPDATE CLIENT_ACCOUNT SET ShopifyClientID = '$shopifyCustomerID' WHERE ClientID = $ClientID";
+    $newRes= mysqli_query($conn, $updateShopifyCustomerID);
   }else{
     echo "Failed";
   }
