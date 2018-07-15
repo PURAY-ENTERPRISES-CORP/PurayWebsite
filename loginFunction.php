@@ -19,6 +19,22 @@ if (mysqli_num_rows($result) > 0) {
   }else{
     echo $fullName;
     $_SESSION["ClientID"] = $ClientID;
+    $customer_login_array = array(
+                    'customer' => array(
+                        'email' => $userName,
+                        'password' =>$password,
+                    )
+                  );
+      $url = 'https://' . $API_KEY . ':' . "43216a38da38ea7009b702f4b779204b" . '@' . $STORE_URL . '/account/login';
+      $ch = curl_init();
+      curl_setopt($ch,CURLOPT_URL,$url);
+      curl_setopt($ch,CURLOPT_POST, 1);                //0 for a get request
+      curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($customer_login_array));
+      curl_setopt($ch,CURLOPT_RETURNTRANSFER, true);
+      curl_setopt($ch,CURLOPT_CONNECTTIMEOUT ,3);
+      curl_setopt($ch,CURLOPT_TIMEOUT, 20);
+      $response = curl_exec($ch);
+      curl_close ($ch);
   }
   }
 }else{

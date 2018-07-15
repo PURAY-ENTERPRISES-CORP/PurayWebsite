@@ -24,11 +24,11 @@ function getLanguage() {
 //dictionary for language replacement
 var arrLang = {
 	'en': {
-		'product': 'PRODUCT',
-		'idea':"I.D.E.A",
+		'product': 'SHOP',
+		'idea':"IDEA BEHIND",
 		'contactUs':"CONTACT US",
-		'naturalBeauty' : "YOUR NATURAL BEAUTY",
-		'smartHealth' : "YOUR SMART HEALTH",
+		'naturalBeauty' : "HYDROGEN WATER",
+		'smartHealth' : "INTELLIGENT MOISTURIZER",
 		'productName' : "HYDROGEN WATER SPRAY",
 		'newsletter':" NEWSLETTER",
 		'email' : 'EMAIL',

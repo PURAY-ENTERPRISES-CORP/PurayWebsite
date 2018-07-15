@@ -127,7 +127,7 @@ font-weight: lighter;
 #search{
   height:17px;
   border: 0;
-  width: calc(16% - 2px);
+  width: calc(60% - 2px);
   margin-left:1px;
   box-shadow: -10px 14px 0px -9px black;
   -webkit-transition: box-shadow 0.3s;
@@ -224,11 +224,13 @@ a:hover{
 
 
 .leftMenu{
+  float:left;
   margin-left:100px;
   font-family: "Quicksand", sans-serif;
   letter-spacing: 0.1rem;
   font-size: 12px;
   z-index: 2;
+  width:300px;
 }
 
 .leftMenuAnimation{
@@ -250,7 +252,6 @@ a:hover{
   display: block;
   line-height: 30px;
 }
-
 
 .introduction{
   margin-left: 10px;
@@ -280,15 +281,16 @@ a:hover{
 }
 
 
-
 .centerContent{
-margin-left: calc(50% - 65px);
-margin-top: -200px;
+margin-left: calc(50% - 50px);
+width:300px;
+height:500px;
+margin-top: 120px;
 font-family: "Quicksand", sans-serif;
 }
 
 .centerContent img{
-  display: block;
+  /*display: block;**/
 }
 
 .bottomContent{
@@ -306,13 +308,16 @@ z-index: 13;
 }
 
 .centerContent #productImg{
-  width: 130px;
+  width: 150px;
+  text-align: center;
 }
 
 .rightContent{
+  float:right;
   font-size: 14px;
   letter-spacing: 0.08rem;
-  margin-left: 1000px;
+  width:300px;
+  margin-right: 100px;
   font-family: "Quicksand", sans-serif;
   margin-top: -380px;
 }
@@ -482,6 +487,7 @@ hr.divisionLine {
 .centerContent #enquiryForm{
 font-family: "Quicksand", sans-serif;
 margin-left: -60px;
+margin-top:-100px;
 }
 
 .centerContent #title{
@@ -1405,4 +1411,75 @@ display: none;
 #hidePasswordInterface{
   color:grey;
   margin-left: calc(40% - 120px);
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.colorModel{
+    background-color: white;
+    color: black;
+    font-weight: lighter;
+    border: 1px solid black;
+}
+
+
+.outofstockModel{
+  text-decoration: line-through;
+}
+.modelSelected{
+    background-color: white
+    color:black;
+    border: 3px solid black;
+}
+
+#colorTitle{
+  font-size:12px;
+}
+
+#outOfStockReminder{
+  font-size:12px;
+  visibility: hidden;
+}
+button:focus {outline:0;}
+
+.priceInfo a{
+  font-size: 11px;
+  text-decoration: underline;
+  font-weight: lighter;
+}
+
+#detailInfopriceInfo{
+  font-size:11px;
+}
+
+.hydrogenIntro{
+  width:600px;
+  text-align: center;
+  margin-left:-250px;
+}
+
+.hydrogenIntro h3{
+  font-size:13px;
+  font-weight: bolder;
+}
+
+.hydrogenIntro p{
+  font-size:12px;
+  line-height:20px;
+}
+
+#elleSay{
+  font-size:14px;
+  letter-spacing: 0.1rem;
 }
